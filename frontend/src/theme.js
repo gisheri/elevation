@@ -13,6 +13,22 @@ const theme = createMuiTheme({
       fontWeight: 700,
       margin: 18,
     },
+    h2: {
+      fontSize: 20,
+      fontWeight: 500,
+      margin: 0,
+      letterSpacing: 3,
+      marginBottom: 1,
+    },
+    h3: {
+      fontSize: 18,
+      fontWeight: 200,
+      marginBottom: 1,
+    },
+    h4: {
+      fontSize: 16,
+      marginBottom: 1,
+    },
     h5: {
       fontSize: 14,
       fontWeight: 400,

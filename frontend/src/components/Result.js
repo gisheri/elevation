@@ -3,10 +3,11 @@ import { useStyles } from './ResultStyles';
 import { ChevronRightIcon, Typography, Avatar } from '../store/index';
 import { generateGradient } from './helpers';
 
-export default function Result({ result }) {
+export default function Result({ result, getDetail }) {
   const classes = useStyles();
+
   return (
-    <div className={classes.card}>
+    <div className={classes.card} onClick={() => getDetail(result.id)}>
       <div className={classes.info}>
         <Avatar style={{ background: generateGradient() }}>
           {result.campus[0]}
