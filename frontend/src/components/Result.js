@@ -14,11 +14,11 @@ export default function Result({ result, getDetail }) {
     <div className={classes.card} onClick={() => getDetail(result.id)}>
       <div className={classes.info}>
         <Avatar style={{ background: generateGradient() }}>
-          {result.campus[0]}
+          {result.group_type[0]}
         </Avatar>
         <div className={classes.details}>
-          <Typography variant='body1'>{result.campus}</Typography>
-          <Typography variant='body2'>{result.group_type}</Typography>
+          <Typography variant='body1'>{result.group_type}</Typography>
+          <Typography variant='body2'>{result.campus}</Typography>
         </div>
       </div>
       <ChevronRightIcon />
