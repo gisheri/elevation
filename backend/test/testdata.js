@@ -64,4 +64,4 @@ const groups = [
   },
 ];
 
-export { groups };
+module.exports = { groups };
