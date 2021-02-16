@@ -6,6 +6,7 @@ const useStyles = makeStyles({
     margin: '1rem',
     width: '20rem',
     padding: '1rem',
+    maxHeight: '432px',
   },
   input: {
     marginBottom: '1rem',

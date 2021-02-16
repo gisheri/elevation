@@ -1,5 +1,5 @@
 import { createMuiTheme } from '@material-ui/core/styles';
-
+import { generateGradient } from './helpers'
 const theme = createMuiTheme({
   typography: {
     h1: {
@@ -21,6 +21,16 @@ const theme = createMuiTheme({
     // Name of the component ⚛️
     MuiPaper: {
       elevation: 3,
+    },
+  },
+  overrides: {
+    MuiAvatar: {
+      root: {
+        marginRight: '15px',
+        '&:hover': {
+          backgroundColor: 'green',
+        },
+      },
     },
   },
 });

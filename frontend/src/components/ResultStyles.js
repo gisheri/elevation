@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   card: {
     margin: '1rem',
     padding: '1rem',
@@ -10,8 +10,12 @@ const useStyles = makeStyles({
   },
   info: {
     display: 'flex',
+  },
+  details: {
+    display: 'flex',
     flexDirection: 'column',
   },
-});
+  
+}));
 
 export { useStyles };
