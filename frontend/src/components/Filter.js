@@ -1,44 +1,73 @@
-import React from 'react';
-import {
-  Paper,
-  Select,
-  MenuItem,
-  Typography,
-  FormControlLabel,
-} from '@material-ui/core';
-import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
-import { BootstrapInput, useStyles, IOSSwitch } from './FilterStyles';
-import { FaChild } from 'react-icons/fa';
-import { filters } from '../store/index';
+import React, { useState } from 'react';
+import { Paper, Select, MenuItem, Typography, Grid } from '@material-ui/core';
+import { BootstrapInput, useStyles, AntSwitch } from './FilterStyles';
+import { filters, FaChild, KeyboardArrowDownIcon } from '../store/index';
+
+const initialValues = {
+  campus: '',
+  demographic: '',
+  groupType: '',
+  meetingDate: '',
+  zipCode: '',
+  childCare: false,
+};
 export default function Filter() {
+  const [state, setState] = useState(initialValues);
   const classes = useStyles();
+
+  function handleChange(e) {
+    const { name, checked, value } = e.target;
+    if (name === 'childCare') setState({ ...state, [name]: checked });
+    else setState({ ...state, [name]: value });
+  }
 
   return (
     <>
       <Paper className={classes.root} elevation={3}>
-        {filters.map((filter) => (
-          <div className={classes.select}>
+        {filters.map((filter, i) => (
+          <div key={i} className={classes.input}>
             <Typography variant='subtitle2'>{filter.title}</Typography>
             <Select
+              labelId=''
+              id='demo-simple-select'
+              onChange={(e) => handleChange(e)}
               defaultValue=''
-              value={'campus'}
+              value={state.value}
               input={<BootstrapInput />}
-              name='campus'
+              name={filter.value}
               IconComponent={KeyboardArrowDownIcon}
             >
-              {filter.options.map((option) => (
-                <MenuItem>{option}</MenuItem>
+              {filter.options.map((option, i) => (
+                <MenuItem value={option} key={i}>
+                  {option}
+                </MenuItem>
               ))}
             </Select>
           </div>
         ))}
         <Typography variant='subtitle2'>Zip Code</Typography>
-        <BootstrapInput defaultValue='react-bootstrap' id='bootstrap-input' />
-        <FaChild className={classes.icon} />
-        <Typography variant='h5'>Child care provided</Typography>
-        <FormControlLabel
-          control={<IOSSwitch checked={true} name='childcare' />}
+        <BootstrapInput
+          defaultValue='28105'
+          id='bootstrap-input'
+          className={classes.input}
         />
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+          }}
+        >
+          <div style={{ display: 'flex' }}>
+            <FaChild className={classes.icon} />
+            <Typography variant='h5'>Child care provided</Typography>
+          </div>
+          <AntSwitch
+            checked={state.childCare}
+            onChange={(e) => handleChange(e)}
+            name='childCare'
+          />
+        </div>
       </Paper>
     </>
   );

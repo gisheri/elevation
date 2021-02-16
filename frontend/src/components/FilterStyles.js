@@ -7,7 +7,7 @@ const useStyles = makeStyles({
     width: '20rem',
     padding: '1rem',
   },
-  select: {
+  input: {
     marginBottom: '1rem',
   },
   icon: {
@@ -18,6 +18,7 @@ const useStyles = makeStyles({
     height: '1rem',
     width: '1rem',
     padding: '.25rem',
+    marginRight: '.5rem',
   },
 });
 
@@ -43,57 +44,39 @@ const BootstrapInput = withStyles((theme) => ({
   },
 }))(InputBase);
 
-const IOSSwitch = withStyles((theme) => ({
+const AntSwitch = withStyles((theme) => ({
   root: {
-    width: 42,
-    height: 26,
+    width: 28,
+    height: 16,
     padding: 0,
-    margin: theme.spacing(1),
+    display: 'flex',
+    color: 'pink',
   },
   switchBase: {
-    padding: 1,
+    padding: 2,
+    color: theme.palette.grey[500],
     '&$checked': {
-      transform: 'translateX(16px)',
+      transform: 'translateX(12px)',
       color: theme.palette.common.white,
       '& + $track': {
-        backgroundColor: '#52d869',
         opacity: 1,
-        border: 'none',
+        backgroundColor: theme.palette.primary.main,
+        borderColor: theme.palette.primary.main,
       },
-    },
-    '&$focusVisible $thumb': {
-      color: '#52d869',
-      border: '6px solid #fff',
     },
   },
   thumb: {
-    width: 24,
-    height: 24,
+    width: 12,
+    height: 12,
+    boxShadow: 'none',
   },
   track: {
-    borderRadius: 26 / 2,
-    border: `1px solid ${theme.palette.grey[400]}`,
-    backgroundColor: theme.palette.grey[50],
+    border: `1px solid ${theme.palette.grey[500]}`,
+    borderRadius: 16 / 2,
     opacity: 1,
-    transition: theme.transitions.create(['background-color', 'border']),
+    backgroundColor: theme.palette.common.white,
   },
   checked: {},
-  focusVisible: {},
-}))(({ classes, ...props }) => {
-  return (
-    <Switch
-      focusVisibleClassName={classes.focusVisible}
-      disableRipple
-      classes={{
-        root: classes.root,
-        switchBase: classes.switchBase,
-        thumb: classes.thumb,
-        track: classes.track,
-        checked: classes.checked,
-      }}
-      {...props}
-    />
-  );
-});
+}))(Switch);
 
-export { BootstrapInput, useStyles, IOSSwitch };
+export { BootstrapInput, useStyles, AntSwitch };
