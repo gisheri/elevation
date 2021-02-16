@@ -3,6 +3,7 @@
 ## available scripts
 
 ### `npm start`
+
 ### `npm test`
 
 # Backend
@@ -23,16 +24,16 @@ Displays current test coverage (table below)
 
 ```
 -------------------|---------|----------|---------|---------|-------------------
-File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
 -------------------|---------|----------|---------|---------|-------------------
-All files          |   92.98 |    66.67 |     100 |   98.04 |                   
- src               |     100 |       50 |     100 |     100 |                   
-  app.js           |     100 |      100 |     100 |     100 |                   
-  config.js        |     100 |       50 |     100 |     100 | 2                 
- src/routes        |    91.3 |       70 |     100 |    97.5 |                   
-  groups-router.js |    87.1 |       70 |     100 |   96.15 | 26                
-  helpers.js       |     100 |      100 |     100 |     100 |                   
-  index.js         |     100 |      100 |     100 |     100 |                   
+All files          |   92.98 |    66.67 |     100 |   98.04 |
+ src               |     100 |       50 |     100 |     100 |
+  app.js           |     100 |      100 |     100 |     100 |
+  config.js        |     100 |       50 |     100 |     100 | 2
+ src/routes        |    91.3 |       70 |     100 |    97.5 |
+  groups-router.js |    87.1 |       70 |     100 |   96.15 | 26
+  helpers.js       |     100 |      100 |     100 |     100 |
+  index.js         |     100 |      100 |     100 |     100 |
 -------------------|---------|----------|---------|---------|-------------------
 ```
 
@@ -55,5 +56,21 @@ You will also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
- ### Test coverage
+### Test coverage
 
+```
+PASS  src/components/Result.test.js
+PASS  src/components/Filter.test.js
+PASS  src/App.test.js
+PASS  src/components/Header.test.js
+PASS  src/components/Results.test.js
+PASS  src/components/NoResults.test.js
+
+Test Suites: 6 passed, 6 total
+Tests:       6 passed, 6 total
+Snapshots:   0 total
+Time:        4.808 s
+Ran all test suites.
+
+Watch Usage: Press w to show more.
+```
