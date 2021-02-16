@@ -20,7 +20,7 @@ const filters = [
   },
   {
     title: 'Group Type',
-    value: 'groupType',
+    value: 'group_type',
     options: [
       'View All',
       'Marriage',
@@ -33,8 +33,14 @@ const filters = [
   },
   {
     title: 'Meeting Date',
-    value: 'meetingDate',
-    options: ['2020-11-02T19:16:57.985Z'],
+    value: 'meeting_date',
+    options: [
+      'View All',
+      '2020-11-02T19:16:57.985Z',
+      '2020-09-02T19:16:57.985Z',
+      '2020-12-02T19:16:57.985Z',
+      '2020-10-02T19:16:57.985Z',
+    ],
   },
 ];
 

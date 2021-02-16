@@ -26,10 +26,15 @@ function filterZipCode(data, zip) {
   return data.filter((group) => group.zip_code == zip);
 }
 
+function filterChildCare(data) {
+  return data.filter((group) => group.additionalProp1[0].childcare === true);
+}
+
 module.exports = {
   filterCampus,
   filterDemographic,
   filterGroupType,
   filterMeetingDate,
   filterZipCode,
+  filterChildCare,
 };

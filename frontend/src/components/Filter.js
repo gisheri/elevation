@@ -17,7 +17,7 @@ const initialValues = {
   groupType: '',
   meetingDate: '',
   zipCode: '',
-  childCare: false,
+  child_care: false,
 };
 export default function Filter({ getResults }) {
   const [state, setState] = useState(initialValues);
@@ -26,15 +26,16 @@ export default function Filter({ getResults }) {
 
   function handleChange(e) {
     const { name, value } = e.target;
-    if (name === 'childCare') setState({ ...state, [name]: !state.childCare });
+    if (name === 'child_care') setState({ ...state, [name]: !state.child_care });
     if (value === 'View All') setState({ ...state, [name]: '' });
-    if (value !== 'View All' && name !== 'childCare')
+    if (value !== 'View All' && name !== 'child_care')
       setState({ ...state, [name]: value });
   }
 
   useEffect(() => {
     let params = getParams(state);
     let queryString = getQueryString(url, params);
+    console.log(queryString)
     getResults(queryString);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state]);
@@ -77,7 +78,7 @@ export default function Filter({ getResults }) {
           <AntSwitch
             checked={state.childCare}
             onChange={(e) => handleChange(e)}
-            name='childCare'
+            name='child_care'
             color='secondary'
           />
         </div>

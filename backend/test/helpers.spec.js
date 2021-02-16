@@ -4,6 +4,7 @@ const {
   filterGroupType,
   filterMeetingDate,
   filterZipCode,
+  filterChildCare,
 } = require('../src/routes/helpers');
 const { assert, expect } = require('chai');
 const { groups } = require('./testdata');
@@ -37,6 +38,12 @@ context('Given the query params are valid', () => {
     it('returns all groups matching query string', () => {
       const result = filterZipCode(groups, 28105);
       expect(result).to.have.length(2);
+    });
+  });
+  context('If given a child_care in the query params', () => {
+    it('returns all groups matching query string', () => {
+      const result = filterChildCare(groups, true);
+      expect(result).to.have.length(3);
     });
   });
 });

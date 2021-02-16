@@ -7,11 +7,20 @@ const {
   filterGroupType,
   filterMeetingDate,
   filterZipCode,
+  filterChildCare,
 } = require('./helpers');
 const groupsRouter = express.Router();
 
 groupsRouter.get('/', async (req, res) => {
-  const { campus, demographic, group_type, meeting_date, zip_code } = req.query;
+  console.log(req.query)
+  const {
+    campus,
+    demographic,
+    group_type,
+    meeting_date,
+    zip_code,
+    child_care,
+  } = req.query;
   try {
     const response = await axios.get(DATABASE_URL);
     const { data } = response;
@@ -21,6 +30,7 @@ groupsRouter.get('/', async (req, res) => {
     if (group_type) result = filterGroupType(result, group_type);
     if (meeting_date) result = filterMeetingDate(result, meeting_date);
     if (zip_code) result = filterZipCode(result, zip_code);
+    if (child_care) result = filterChildCare(result, child_care);
     res.status(200).send(result);
   } catch (error) {
     res.status(404).send(error);
