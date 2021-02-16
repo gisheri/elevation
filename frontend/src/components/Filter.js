@@ -29,6 +29,7 @@ export default function Filter({ getResults }) {
     let params = getParams(state);
     let queryString = getQueryString(url, params);
     getResults(queryString);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state]);
   
   return (
