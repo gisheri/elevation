@@ -7,7 +7,7 @@ import {
   Switch,
   Avatar,
 } from '@material-ui/core';
-import { makeStyles, withStyles } from '@material-ui/core/styles';
+import { makeStyles, withStyles, ThemeProvider } from '@material-ui/core/styles';
 
 export {
   Paper,
@@ -19,4 +19,5 @@ export {
   makeStyles,
   withStyles,
   Avatar,
+  ThemeProvider,
 };

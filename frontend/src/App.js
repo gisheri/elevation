@@ -1,10 +1,8 @@
 import { useState } from 'react';
 import Filter from './components/Filter';
 import Results from './components/Results';
-import { ThemeProvider } from '@material-ui/core/styles';
+import { ThemeProvider } from './store/index';
 import { theme } from './theme';
-import { Typography } from '@material-ui/core';
-import { logo } from './store/index';
 import axios from 'axios';
 import Header from './components/Header';
 
