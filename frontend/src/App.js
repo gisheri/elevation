@@ -7,13 +7,13 @@ import { Typography } from '@material-ui/core';
 
 function App() {
   return (
-    <>
-      <ThemeProvider theme={theme}>
-        <Typography variant='h1'>Choose your eGroup</Typography>
+    <ThemeProvider theme={theme}>
+      <Typography variant='h1'>Choose your eGroup</Typography>
+      <div style={{ display: 'flex' }}>
         <Filter />
         <Results />
-      </ThemeProvider>
-    </>
+      </div>
+    </ThemeProvider>
   );
 }
 

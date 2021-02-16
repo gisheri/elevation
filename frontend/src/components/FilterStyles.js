@@ -10,6 +10,11 @@ const useStyles = makeStyles({
   input: {
     marginBottom: '1rem',
   },
+  flex: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
   icon: {
     color: 'white',
     border: '1px solid #1977F2',

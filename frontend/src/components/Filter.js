@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { Paper, Select, MenuItem, Typography, Grid } from '@material-ui/core';
+import React, { useState, useEffect } from 'react';
+import { Paper, Select, MenuItem, Typography } from '@material-ui/core';
 import { BootstrapInput, useStyles, AntSwitch } from './FilterStyles';
 import { filters, FaChild, KeyboardArrowDownIcon } from '../store/index';
-
+import axios from 'axios';
 const initialValues = {
   campus: '',
   demographic: '',
@@ -14,6 +14,7 @@ const initialValues = {
 export default function Filter() {
   const [state, setState] = useState(initialValues);
   const classes = useStyles();
+  let url = 'http://localhost:8000/groups/?';
 
   function handleChange(e) {
     const { name, checked, value } = e.target;
@@ -21,6 +22,23 @@ export default function Filter() {
     else setState({ ...state, [name]: value });
   }
 
+  useEffect(() => {
+    let params = Object.entries(state).filter(
+      (param) => Boolean(param[1]) !== false
+    );
+    let queryString =
+      url + params.map((key) => key[0] + '=' + key[1]).join('&');
+    getResults(queryString);
+  }, [state, url]);
+
+  async function getResults(query) {
+    try {
+      const result = await axios.get(query);
+      console.log(result.data);
+    } catch (error) {
+      console.error(error);
+    }
+  }
   return (
     <>
       <Paper className={classes.root} elevation={3}>
@@ -51,14 +69,8 @@ export default function Filter() {
           id='bootstrap-input'
           className={classes.input}
         />
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-          }}
-        >
-          <div style={{ display: 'flex' }}>
+        <div className={classes.flex}>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
             <FaChild className={classes.icon} />
             <Typography variant='h5'>Child care provided</Typography>
           </div>
@@ -66,6 +78,7 @@ export default function Filter() {
             checked={state.childCare}
             onChange={(e) => handleChange(e)}
             name='childCare'
+            color='secondary'
           />
         </div>
       </Paper>
