@@ -21,7 +21,7 @@ function App() {
       <Typography variant='h1'>Choose your eGroup</Typography>
       <div style={{ display: 'flex' }}>
         <Filter getResults={getResults} />
-        <Results results={results} />
+        {results && <Results results={results} />}
       </div>
     </ThemeProvider>
   );

@@ -1,12 +1,15 @@
-import React from 'react'
-import { Paper, Select, MenuItem, Typography } from '@material-ui/core';
-import { useStyles } from './FilterStyles'
+import React from 'react';
+import { Paper } from '@material-ui/core';
+import { useStyles } from './ResultsStyles';
+import Result from './Result';
+
 export default function Results({ results }) {
-    const classes = useStyles()
-    console.log(results)
-    return (
-      <Paper className={classes.root}>
-        <pre>{JSON.stringify(results, null, 2)}</pre>
-      </Paper>
-    );
+  const classes = useStyles();
+  return (
+    <Paper className={classes.paper}>
+      {results.map((result, i) => (
+        <Result key={i} result={result} />
+      ))}
+    </Paper>
+  );
 }

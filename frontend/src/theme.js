@@ -17,10 +17,6 @@ const theme = createMuiTheme({
       margin: 5,
     },
   },
-  paper: {
-    margin: 1,
-    border: '1px solid red'
-  },
   props: {
     // Name of the component ⚛️
     MuiPaper: {
