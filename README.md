@@ -21,6 +21,21 @@ Runs all automated tests written for the backend. 13 passing tests result in 100
 
 Displays current test coverage (table below)
 
+```
+-------------------|---------|----------|---------|---------|-------------------
+File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-------------------|---------|----------|---------|---------|-------------------
+All files          |   92.98 |    66.67 |     100 |   98.04 |                   
+ src               |     100 |       50 |     100 |     100 |                   
+  app.js           |     100 |      100 |     100 |     100 |                   
+  config.js        |     100 |       50 |     100 |     100 | 2                 
+ src/routes        |    91.3 |       70 |     100 |    97.5 |                   
+  groups-router.js |    87.1 |       70 |     100 |   96.15 | 26                
+  helpers.js       |     100 |      100 |     100 |     100 |                   
+  index.js         |     100 |      100 |     100 |     100 |                   
+-------------------|---------|----------|---------|---------|-------------------
+```
+
 # Frontend
 
 ## Available scripts
