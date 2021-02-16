@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Paper, Select, MenuItem, Typography } from '@material-ui/core';
 import { BootstrapInput, useStyles, AntSwitch } from './FilterStyles';
 import { filters, FaChild, KeyboardArrowDownIcon } from '../store/index';
-import axios from 'axios';
+import { getQueryString, getParams } from './helpers';
+
 const initialValues = {
   campus: '',
   demographic: '',
@@ -11,7 +12,7 @@ const initialValues = {
   zipCode: '',
   childCare: false,
 };
-export default function Filter() {
+export default function Filter({ getResults }) {
   const [state, setState] = useState(initialValues);
   const classes = useStyles();
   let url = 'http://localhost:8000/groups/?';
@@ -19,29 +20,19 @@ export default function Filter() {
   function handleChange(e) {
     const { name, checked, value } = e.target;
     if (name === 'childCare') setState({ ...state, [name]: checked });
+    if (value === 'View All') setState({ ...state, [name]: '' });
     else setState({ ...state, [name]: value });
   }
 
   useEffect(() => {
-    let params = Object.entries(state).filter(
-      (param) => Boolean(param[1]) !== false
-    );
-    let queryString =
-      url + params.map((key) => key[0] + '=' + key[1]).join('&');
+    let params = getParams(state);
+    let queryString = getQueryString(url, params);
     getResults(queryString);
-  }, [state, url]);
+  }, [state]);
 
-  async function getResults(query) {
-    try {
-      const result = await axios.get(query);
-      console.log(result.data);
-    } catch (error) {
-      console.error(error);
-    }
-  }
   return (
     <>
-      <Paper className={classes.root} elevation={3}>
+      <Paper className={classes.root}>
         {filters.map((filter, i) => (
           <div key={i} className={classes.input}>
             <Typography variant='subtitle2'>{filter.title}</Typography>

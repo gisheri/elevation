@@ -1,9 +1,12 @@
 import React from 'react'
-
-export default function Results() {
+import { Paper, Select, MenuItem, Typography } from '@material-ui/core';
+import { useStyles } from './FilterStyles'
+export default function Results({ results }) {
+    const classes = useStyles()
+    console.log(results)
     return (
-        <div>
-            results
-        </div>
-    )
+      <Paper className={classes.root}>
+        <pre>{JSON.stringify(results, null, 2)}</pre>
+      </Paper>
+    );
 }

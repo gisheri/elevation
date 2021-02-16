@@ -3,6 +3,7 @@ const filters = [
     title: 'Campus',
     value: 'campus',
     options: [
+      'View All',
       'Asheville',
       'Ballantyne',
       'Blakeney',
@@ -15,12 +16,13 @@ const filters = [
   {
     title: 'Demographic',
     value: 'demographic',
-    options: ['Men', 'Singles', 'Women', 'Everyone Welcome'],
+    options: ['View All', 'Men', 'Singles', 'Women', 'Everyone Welcome'],
   },
   {
     title: 'Group Type',
     value: 'groupType',
     options: [
+      'View All',
       'Marriage',
       'Spiritual Growth',
       'Book Study',

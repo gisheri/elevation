@@ -11,13 +11,20 @@ const theme = createMuiTheme({
       fontSize: 14,
       fontWeight: 600,
     },
-    subtitle2: { fontWeight: 800, fontSize: 12, margin: 5 },
+    subtitle2: {
+      fontWeight: 800,
+      fontSize: 12,
+      margin: 5,
+    },
+  },
+  paper: {
+    margin: 1,
+    border: '1px solid red'
   },
   props: {
     // Name of the component ⚛️
-    MuiButtonBase: {
-      // The default props to change
-      disableRipple: true, // No more ripple, on the whole application 💣!
+    MuiPaper: {
+      elevation: 3,
     },
   },
 });
