@@ -1,11 +1,6 @@
 import { makeStyles, withStyles } from '@material-ui/core/styles';
-import {
-  Paper,
-  Select,
-  InputBase,
-  MenuItem,
-  Typography,
-} from '@material-ui/core';
+import { InputBase } from '@material-ui/core';
+
 const useStyles = makeStyles({
   root: {
     margin: '1rem',

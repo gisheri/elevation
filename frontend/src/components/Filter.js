@@ -2,24 +2,10 @@ import React from 'react';
 import { Paper, Select, MenuItem, Typography } from '@material-ui/core';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import { BootstrapInput, useStyles } from './FilterStyles';
-
+import { filters } from '../store/index'
 export default function Filter() {
   const classes = useStyles();
-  const filters = [
-    {
-      title: 'Campus',
-      options: ['Concord', 'Ballantyne', 'Elevation Online', 'Hawthorne'],
-    },
-    {
-      title: 'Demographic',
-    },
-    {
-      title: 'Group Type',
-    },
-    {
-      title: 'Meeting Date',
-    },
-  ];
+
   return (
     <div>
       <Paper className={classes.root} elevation={3}>
@@ -33,7 +19,9 @@ export default function Filter() {
               name='campus'
               IconComponent={KeyboardArrowDownIcon}
             >
-              <MenuItem>concord</MenuItem>
+              {filter.options.map((option) => (
+                <MenuItem>{option}</MenuItem>
+              ))}
             </Select>
           </>
         ))}
