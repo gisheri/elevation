@@ -1,5 +1,4 @@
-import { makeStyles, withStyles } from '@material-ui/core/styles';
-import { InputBase, Switch } from '@material-ui/core';
+import { makeStyles, withStyles, InputBase, Switch } from '../store/index';
 
 const useStyles = makeStyles({
   root: {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Paper } from '@material-ui/core';
+import { Paper } from '../store/index';
 import { useStyles } from './ResultsStyles';
 import Result from './Result';
 

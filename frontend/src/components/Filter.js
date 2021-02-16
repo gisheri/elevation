@@ -1,7 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { Paper, Select, MenuItem, Typography } from '@material-ui/core';
+import {
+  Paper,
+  Select,
+  MenuItem,
+  Typography,
+  filters,
+  FaChild,
+  KeyboardArrowDownIcon,
+} from '../store/index';
 import { BootstrapInput, useStyles, AntSwitch } from './FilterStyles';
-import { filters, FaChild, KeyboardArrowDownIcon } from '../store/index';
 import { getQueryString, getParams } from './helpers';
 
 const initialValues = {

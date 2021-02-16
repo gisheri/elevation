@@ -1,7 +1,6 @@
-import { Avatar, Typography } from '@material-ui/core';
 import React from 'react';
 import { useStyles } from './ResultStyles';
-import { ChevronRightIcon } from '../store/icons';
+import { ChevronRightIcon, Typography, Avatar } from '../store/index';
 import { generateGradient } from './helpers';
 
 export default function Result({ result }) {
@@ -13,8 +12,8 @@ export default function Result({ result }) {
           {result.campus[0]}
         </Avatar>
         <div className={classes.details}>
-          <Typography variant='h5'>{result.campus}</Typography>
-          <Typography variant='body1'>{result.group_type}</Typography>
+          <Typography variant='body1'>{result.campus}</Typography>
+          <Typography variant='body2'>{result.group_type}</Typography>
         </div>
       </div>
       <ChevronRightIcon />

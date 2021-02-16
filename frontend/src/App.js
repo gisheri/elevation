@@ -4,7 +4,9 @@ import Results from './components/Results';
 import { ThemeProvider } from '@material-ui/core/styles';
 import { theme } from './theme';
 import { Typography } from '@material-ui/core';
+import { logo } from './store/index';
 import axios from 'axios';
+import Header from './components/Header';
 
 function App() {
   const [results, setResults] = useState();
@@ -16,9 +18,10 @@ function App() {
       console.error(error);
     }
   }
+
   return (
     <ThemeProvider theme={theme}>
-      <Typography variant='h1'>Choose your eGroup</Typography>
+      <Header />
       <div style={{ display: 'flex' }}>
         <Filter getResults={getResults} />
         {results && <Results results={results} />}
