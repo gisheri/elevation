@@ -18,10 +18,11 @@ export default function Filter({ getResults }) {
   let url = 'http://localhost:8000/groups/?';
 
   function handleChange(e) {
-    const { name, checked, value } = e.target;
-    if (name === 'childCare') setState({ ...state, [name]: checked });
+    const { name, value } = e.target;
+    if (name === 'childCare') setState({ ...state, [name]: !state.childCare });
     if (value === 'View All') setState({ ...state, [name]: '' });
-    else setState({ ...state, [name]: value });
+    if (value !== 'View All' && name !== 'childCare')
+      setState({ ...state, [name]: value });
   }
 
   useEffect(() => {
@@ -29,7 +30,7 @@ export default function Filter({ getResults }) {
     let queryString = getQueryString(url, params);
     getResults(queryString);
   }, [state]);
-
+  
   return (
     <>
       <Paper className={classes.root}>

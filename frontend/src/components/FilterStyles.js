@@ -45,6 +45,7 @@ const BootstrapInput = withStyles((theme) => ({
     backgroundColor: '#f4f4f7',
     border: '1px solid #ffffff',
     fontSize: 16,
+    fontWeight: 500,
     padding: '10px 26px 10px 12px',
     width: '100%',
   },

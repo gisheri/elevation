@@ -3,7 +3,6 @@ import { createMuiTheme } from '@material-ui/core/styles';
 const theme = createMuiTheme({
   typography: {
     fontFamily: "'Montserrat', sans-serif",
-
     h1: {
       fontSize: 28,
       fontWeight: 700,
@@ -11,10 +10,10 @@ const theme = createMuiTheme({
     },
     h5: {
       fontSize: 14,
-      fontWeight: 600,
+      fontWeight: 400,
     },
     subtitle2: {
-      fontWeight: 800,
+      fontWeight: 600,
       fontSize: 12,
       margin: 5,
     },
