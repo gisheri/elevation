@@ -5,6 +5,8 @@ const useStyles = makeStyles({
     margin: '1rem',
     width: '30rem',
     padding: '1rem',
+    maxHeight: '600px',
+    overflow: 'scroll'
   }
 });
 

@@ -1,10 +1,12 @@
 import { createMuiTheme } from '@material-ui/core/styles';
-import { generateGradient } from './helpers'
+
 const theme = createMuiTheme({
   typography: {
+    fontFamily: "'Montserrat', sans-serif",
+
     h1: {
       fontSize: 28,
-      fontWeight: 800,
+      fontWeight: 700,
       margin: 18,
     },
     h5: {
