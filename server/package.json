@@ -6,6 +6,8 @@
   "scripts": {
     "test": "mocha --require test/setup.js",
     "coverage": "nyc mocha test/setup.js test/app.spec.js test/groups.spec.js test/helpers.spec.js",
+    "env": "touch .env",
+    "db": "echo 'DATABASE_URL=http://localhost:3000/api/groups' >> .env",
     "dev": "nodemon src/server.js",
     "start": "node src/server.js",
     "predeploy": "npm audit",

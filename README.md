@@ -1,14 +1,28 @@
 # Database
 
-## available scripts
+### Before running the code, please enter `cd frontend` from the project directory and follow the 2 steps below.
 
-### `npm start`
+1. `npm install`
+2. `node .`
 
-### `npm test`
+## Available scripts
 
-# Backend
+`node .`
 
-In the backend directory, you can run:
+Seeds the database with the given data and starts the database
+
+# Server
+
+### Before running the code, please enter `cd server` from the project directory and follow the 4 steps below.
+
+From the `server` directory, please run the following commands:
+
+1. `npm install`
+2. `npm run env`
+3. `npm run db`
+4. `npm run dev`
+
+In the server directory, you can run:
 
 `npm run dev`
 
@@ -24,20 +38,25 @@ Displays current test coverage (table below)
 
 ```
 -------------------|---------|----------|---------|---------|-------------------
-File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
 -------------------|---------|----------|---------|---------|-------------------
-All files          |   91.94 |    64.29 |     100 |   98.15 |                   
- src               |     100 |       50 |     100 |     100 |                   
-  app.js           |     100 |      100 |     100 |     100 |                   
-  config.js        |     100 |       50 |     100 |     100 | 2                 
- src/routes        |    90.2 |    66.67 |     100 |   97.67 |                   
-  groups-router.js |   85.29 |    66.67 |     100 |   96.43 | 36                
-  helpers.js       |     100 |      100 |     100 |     100 |                   
-  index.js         |     100 |      100 |     100 |     100 |                   
+All files          |   91.94 |    64.29 |     100 |   98.15 |
+ src               |     100 |       50 |     100 |     100 |
+  app.js           |     100 |      100 |     100 |     100 |
+  config.js        |     100 |       50 |     100 |     100 | 2
+ src/routes        |    90.2 |    66.67 |     100 |   97.67 |
+  groups-router.js |   85.29 |    66.67 |     100 |   96.43 | 36
+  helpers.js       |     100 |      100 |     100 |     100 |
+  index.js         |     100 |      100 |     100 |     100 |
 -------------------|---------|----------|---------|---------|-------------------
 ```
 
 # Frontend
+
+### Before running the code, please enter `cd frontend` from the project directory and follow the 2 steps below.
+
+1. `npm install`
+2. `npm start`
 
 ## Available scripts
 
