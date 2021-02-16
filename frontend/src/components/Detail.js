@@ -1,8 +1,9 @@
 import React from 'react';
-import { generateGradient } from './helpers';
+import { generateGradient } from '../store/helpers';
 import { useStyles } from './DetailStyles';
-import { ChevronLeftIcon, Typography, Avatar } from '../store/index';
-export default function Detail({ detail }) {
+import { ChevronLeftIcon, Typography, Avatar, getTime } from '../store/index';
+
+export default function Detail({ detail, setDetail }) {
   const classes = useStyles();
 
   return (
@@ -19,7 +20,10 @@ export default function Detail({ detail }) {
           </div>
         </div>
         <div className={classes.right}>
-          <Typography variant='body2'>{detail.meeting_date}</Typography>
+          <Typography variant='body2'>
+            {getTime(detail.meeting_date).day}s at{' '}
+            {getTime(detail.meeting_date).time}
+          </Typography>
           <Typography variant='h6'>{detail.zip_code}</Typography>
         </div>
       </div>
@@ -28,9 +32,8 @@ export default function Detail({ detail }) {
           ? 'Childcare available'
           : 'No childcare available'}
       </Typography>
-
       <br />
-      <ChevronLeftIcon className={classes.svg} />
+      <ChevronLeftIcon className={classes.svg} onClick={e => setDetail('')} />
     </>
   );
 }

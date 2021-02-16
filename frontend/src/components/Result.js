@@ -1,7 +1,11 @@
 import React from 'react';
 import { useStyles } from './ResultStyles';
-import { ChevronRightIcon, Typography, Avatar } from '../store/index';
-import { generateGradient } from './helpers';
+import {
+  ChevronRightIcon,
+  Typography,
+  Avatar,
+  generateGradient,
+} from '../store/index';
 
 export default function Result({ result, getDetail }) {
   const classes = useStyles();

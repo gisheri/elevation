@@ -8,7 +8,7 @@ import Header from './components/Header';
 
 function App() {
   const [results, setResults] = useState();
-  const [detail, setDetail] = useState();
+  const [detail, setDetail] = useState('');
 
   async function getResults(query) {
     try {
@@ -35,7 +35,7 @@ function App() {
       <div style={{ display: 'flex' }}>
         <Filter getResults={getResults} />
         {results && (
-          <Results results={results} getDetail={getDetail} detail={detail} />
+          <Results results={results} getDetail={getDetail} detail={detail} setDetail={setDetail} />
         )}
       </div>
     </ThemeProvider>

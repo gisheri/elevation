@@ -9,7 +9,7 @@ import {
   KeyboardArrowDownIcon,
 } from '../store/index';
 import { BootstrapInput, useStyles, AntSwitch } from './FilterStyles';
-import { getQueryString, getParams } from './helpers';
+import { getQueryString, getParams } from '../store/helpers';
 
 const initialValues = {
   campus: '',
