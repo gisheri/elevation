@@ -5,7 +5,6 @@ import { ThemeProvider } from './store/index';
 import { theme } from './theme';
 import axios from 'axios';
 import Header from './components/Header';
-import Detail from './components/Detail';
 
 function App() {
   const [results, setResults] = useState();

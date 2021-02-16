@@ -1,6 +1,3 @@
 {
-  "@loopback/cli": {
-    "packageManager": "npm",
-    "version": "2.19.0"
-  }
+  "generator-loopback": {}
 }

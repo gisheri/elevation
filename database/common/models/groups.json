@@ -1,0 +1,44 @@
+{
+  "name": "Groups",
+  "plural": "Groups",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number"
+    },
+    "campus": {
+      "type": "string",
+      "required": true
+    },
+    "demographic": {
+      "type": "string",
+      "required": true
+    },
+    "group_type": {
+      "type": "string",
+      "required": true
+    },
+    "meeting_date": {
+      "type": "string",
+      "required": true
+    },
+    "zip_code": {
+      "type": "number",
+      "required": true
+    },
+    "additionalProp1": {
+      "type": [
+        "object"
+      ],
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
