@@ -6,6 +6,7 @@ const useStyles = makeStyles({
     width: '30rem',
     padding: '1rem',
     maxHeight: '600px',
+    minWidth: 395,
     overflow: 'scroll'
   }
 });
