@@ -96,19 +96,20 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ```
 PASS  src/components/Result.test.js
-PASS  src/components/Filter.test.js
+PASS  src/components/Results.test.js
 PASS  src/App.test.js
 PASS  src/components/Header.test.js
-PASS  src/components/Results.test.js
 PASS  src/components/NoResults.test.js
+PASS  src/components/Filter.test.js
 
 Test Suites: 6 passed, 6 total
 Tests:       6 passed, 6 total
 Snapshots:   0 total
-Time:        4.808 s
+Time:        5.773 s
 Ran all test suites.
 
 Watch Usage: Press w to show more.
+
 ```
 
 # Folder structure

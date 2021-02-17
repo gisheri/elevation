@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import Result from './Result.tsx';
+import { Result } from './Result.tsx';
 import { groups } from '../data';
 
 test('renders learn react link', () => {

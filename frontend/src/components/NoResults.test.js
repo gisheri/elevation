@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import NoResults from './NoResults';
+import { NoResults } from './NoResults';
 
 test('renders learn react link', () => {
   render(<NoResults />);
