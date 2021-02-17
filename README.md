@@ -2,9 +2,9 @@
 
 This project is a coding challenge for the web developer position at Elevation Church. The requirements are listed in `requirements.md`.
 
-In order to run this application, you will need to follow the steps below for `Database`, `Server`, and `Frontend`. Once you have completed the steps, make sure `Database`, `Server`, and `Frontend` are running by entering the commands `node .`, `npm run dev`, and `npm start`, respectively.
+In order to run this application, you will need to follow the steps below for **Database**, **Server**, and **Frontend**. Once you have completed the steps, ensure `database`, `server`, and `frontend` are all running by entering the commands `node .`, `npm run dev`, and `npm start`, respectively.
 
-I chose to build the `Database` and `Server` individually to create a scalable microservice architecture.
+I chose to build the **Database** and **Server** individually to create a scalable microservice architecture.
 
 **Technologies: Loopback.io, Node.js, Typescript, React.js, MaterialUI, Mocha, Chai, Jest, moment**
 
@@ -12,10 +12,9 @@ I chose to build the `Database` and `Server` individually to create a scalable m
 
 ## Database\*
 
-### Before running the code, please enter `cd database` from the project directory and follow the 2 steps below. 
+### Before running the code, please enter `cd database` from the project directory and follow the 2 steps below.
 
-
-*\* This database is built with [loopback.io](https://loopback.io/getting-started.html). If you do not have loopback installed on your machine, you may need to run the command `$ npm install -g @loopback/cli` before running the steps below. For more information, click the link above.*
+_\* This database is built with [loopback.io](https://loopback.io/getting-started.html). If you do not have loopback installed on your machine, you may need to run the command `$ npm install -g @loopback/cli` before running the steps below. For more information, click the link above._
 
 1. `npm install`
 2. `node .`
@@ -39,6 +38,7 @@ From the `server` directory, please run the following commands:
 2. `npm start`
 
 It works best to run these commands from multiple tabs within terminal. Once `Database`, `Server`, and `Frontend` are all running, your browser can access the project at [http://localhost:3006](http://localhost:3006).
+
 # Available scripts
 
 ## Database
@@ -77,6 +77,7 @@ All files          |   91.94 |    64.29 |     100 |   98.15 |
   index.js         |     100 |      100 |     100 |     100 |
 -------------------|---------|----------|---------|---------|-------------------
 ```
+
 ## Frontend
 
 In the `frontend` directory, you can run:
