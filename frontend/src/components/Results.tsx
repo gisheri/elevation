@@ -2,7 +2,7 @@ import React from 'react';
 import { Paper } from '../store/index';
 import { useStyles } from './ResultsStyles';
 import { NoResults } from './NoResults';
-import {Result} from './Result';
+import { Result } from './Result';
 import { Detail } from './Detail';
 import { IDetail } from './Detail';
 

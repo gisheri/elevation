@@ -17,6 +17,4 @@ export const NoResults: React.FC = () => {
       </Typography>
     </div>
   );
-}
-
-
+};
