@@ -6,6 +6,8 @@ In order to run this application, you will need to follow the steps below for `D
 
 I chose to build the `Database` and `Server` individually to create a scalable microservice architecture.
 
+Used: Loopback.io, Node.js, Typescript, React.js, MaterialUI, Mocha, Chai, Jest, moment, 
+
 # How to get it running
 
 ## Database\*
