@@ -3,7 +3,10 @@ import { makeStyles } from '../store/index';
 const useStyles = makeStyles((theme) => ({
   top: {
     marginBottom: 15,
+    paddingLeft: '1rem',
     borderBottom: '3px solid #E1E1E1',
+    display: 'flex',
+    alignItems: 'center',
   },
   bottom: {
     padding: '0 0 0 20px',
@@ -18,6 +21,8 @@ const useStyles = makeStyles((theme) => ({
   back: {
     display: 'flex',
     alignItems: 'center',
+    height: 50,
+    width: '50%',
     '&:hover': {
       cursor: 'pointer',
       background: '#F4F5F7',
