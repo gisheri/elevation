@@ -1,6 +1,9 @@
-# Database
+# Database*
 
-### Before running the code, please enter `cd frontend` from the project directory and follow the 2 steps below.
+### Before running the code, please enter `cd database` from the project directory and follow the 2 steps below. The databse is built with [loopback.io](https://loopback.io/getting-started.html). 
+
+*If you do not have loopback installed on your machine, you may need to run the command `$ npm install -g @loopback/cli`. For more information, click the link in the paragraph above.
+
 
 1. `npm install`
 2. `node .`
