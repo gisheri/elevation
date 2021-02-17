@@ -2,11 +2,11 @@
 
 This project is a coding challenge for the web developer position at Elevation Church. The requirements are listed in `requirements.md`.
 
-In order to run this application, you will need to follow the steps below for **Database**, **Server**, and **Frontend**. Once you have completed the steps, ensure `database`, `server`, and `frontend` are all running by entering the commands `node .`, `npm run dev`, and `npm start`, respectively.
+In order to run this application, please follow the steps below for **Database**, **Server**, and **Frontend**. Once you have completed the steps, ensure `database`, `server`, and `frontend` are all running by entering the commands `node .`, `npm run dev`, and `npm start`, respectively.
 
 I chose to build the **Database** and **Server** individually to create a scalable microservice architecture.
 
-**Technologies: Loopback.io, Node.js, Typescript, React.js, MaterialUI, Mocha, Chai, Jest, moment**
+**Technologies: Loopback.io, Node.js, Typescript, React.js, MaterialUI, Mocha, Chai, Jest, Moment.js**
 
 # How to get it running
 
@@ -37,7 +37,7 @@ From the `server` directory, please run the following commands:
 1. `npm install`
 2. `npm start`
 
-It works best to run these commands from multiple tabs within terminal. Once `Database`, `Server`, and `Frontend` are all running, your browser can access the project at [http://localhost:3006](http://localhost:3006).
+It works best to run these commands from multiple tabs within terminal. Once **Database**, **Server**, and **Frontend** are all running, your browser can access the project at [http://localhost:3006](http://localhost:3006).
 
 # Available scripts
 
@@ -147,39 +147,41 @@ Watch Usage: Press w to show more.
 │   │   ├── index.html
 │   │   ├── manifest.json
 │   │   └── robots.txt
-│   └── src
-│       ├── App.css
-│       ├── App.js
-│       ├── App.test.js
-│       ├── components
-│       │   ├── Detail.js
-│       │   ├── DetailStyles.js
-│       │   ├── Filter.js
-│       │   ├── Filter.test.js
-│       │   ├── FilterStyles.js
-│       │   ├── Header.js
-│       │   ├── Header.test.js
-│       │   ├── NoResults.js
-│       │   ├── NoResults.test.js
-│       │   ├── NoResultsStyles.js
-│       │   ├── Result.js
-│       │   ├── Result.test.js
-│       │   ├── ResultStyles.js
-│       │   ├── Results.js
-│       │   ├── Results.test.js
-│       │   └── ResultsStyles.js
-│       ├── data.js
-│       ├── index.css
-│       ├── index.js
-│       ├── reportWebVitals.js
-│       ├── setupTests.js
-│       ├── store
-│       │   ├── constants.js
-│       │   ├── helpers.js
-│       │   ├── icons.js
-│       │   ├── index.js
-│       │   └── material-components.js
-│       └── theme.js
+│   ├── src
+│   │   ├── App.css
+│   │   ├── App.js
+│   │   ├── App.test.js
+│   │   ├── components
+│   │   │   ├── Detail.tsx
+│   │   │   ├── DetailStyles.js
+│   │   │   ├── Filter.js
+│   │   │   ├── Filter.test.js
+│   │   │   ├── FilterStyles.js
+│   │   │   ├── Header.test.js
+│   │   │   ├── Header.tsx
+│   │   │   ├── NoResults.test.js
+│   │   │   ├── NoResults.tsx
+│   │   │   ├── NoResultsStyles.js
+│   │   │   ├── Result.test.js
+│   │   │   ├── Result.tsx
+│   │   │   ├── ResultStyles.js
+│   │   │   ├── Results.test.js
+│   │   │   ├── Results.tsx
+│   │   │   └── ResultsStyles.js
+│   │   ├── data.js
+│   │   ├── index.css
+│   │   ├── index.js
+│   │   ├── react-app-env.d.ts
+│   │   ├── reportWebVitals.js
+│   │   ├── setupTests.js
+│   │   ├── store
+│   │   │   ├── constants.js
+│   │   │   ├── helpers.js
+│   │   │   ├── icons.js
+│   │   │   ├── index.js
+│   │   │   └── material-components.js
+│   │   └── theme.js
+│   └── tsconfig.json
 ├── requirements.md
 └── server
     ├── package-lock.json
