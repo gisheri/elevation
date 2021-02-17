@@ -1,11 +1,24 @@
 import React from 'react';
 import { Paper } from '../store/index';
 import { useStyles } from './ResultsStyles';
-import NoResults from './NoResults.tsx';
-import Result from './Result';
-import { Detail } from './Detail.tsx';
+import { NoResults } from './NoResults';
+import {Result} from './Result';
+import { Detail } from './Detail';
+import { IDetail } from './Detail';
 
-export default function Results({ results, getDetail, detail, setDetail }) {
+export interface IResults {
+  detail: IDetail['detail'];
+  setDetail: IDetail['setDetail'];
+  results: [];
+  getDetail: () => [];
+}
+
+export const Results: React.FC<IResults> = ({
+  results,
+  getDetail,
+  detail,
+  setDetail,
+}) => {
   const classes = useStyles();
 
   return (
@@ -19,4 +32,4 @@ export default function Results({ results, getDetail, detail, setDetail }) {
         ))}
     </Paper>
   );
-}
+};

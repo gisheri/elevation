@@ -21,6 +21,7 @@ const initialValues = {
   zipCode: '',
   child_care: false,
 };
+
 export default function Filter({ getResults }) {
   const [state, setState] = useState(initialValues);
   const classes = useStyles();

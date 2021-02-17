@@ -6,8 +6,14 @@ import {
   Avatar,
   generateGradient,
 } from '../store/index';
+import { IDetail } from './Detail';
 
-export default function Result({ result, getDetail }) {
+interface IResult {
+  result: IDetail['detail'];
+  getDetail: (arg0: number) => [];
+}
+
+export const Result: React.FC<IResult> = ({ result, getDetail }) => {
   const classes = useStyles();
 
   return (
@@ -24,4 +30,4 @@ export default function Result({ result, getDetail }) {
       <ChevronRightIcon />
     </div>
   );
-}
+};

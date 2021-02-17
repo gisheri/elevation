@@ -12,8 +12,9 @@ import {
   PersonIcon,
 } from '../store/index';
 
-interface DetailProps {
+export interface IDetail {
   detail: {
+    id: number;
     group_type: string;
     campus: string;
     meeting_date: string;
@@ -28,10 +29,7 @@ interface DetailProps {
   setDetail: () => [];
 }
 
-export const Detail: React.FunctionComponent<DetailProps> = ({
-  detail,
-  setDetail,
-}) => {
+export const Detail: React.FC<IDetail> = ({ detail, setDetail }) => {
   const classes = useStyles();
 
   return (

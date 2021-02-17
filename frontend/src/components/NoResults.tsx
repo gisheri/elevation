@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Typography } from '../store/index';
 import { useStyles } from './NoResultsStyles';
 
-export default function NoResults() {
+export const NoResults: React.FC = () => {
   const classes = useStyles();
   return (
     <div className={classes.container}>
