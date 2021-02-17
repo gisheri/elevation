@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { Typography } from '../store/index';
 import { useStyles } from './NoResultsStyles';
 
@@ -18,3 +18,5 @@ export default function NoResults() {
     </div>
   );
 }
+
+

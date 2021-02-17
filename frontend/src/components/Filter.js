@@ -38,11 +38,10 @@ export default function Filter({ getResults }) {
   useEffect(() => {
     let params = getParams(state);
     let queryString = getQueryString(url, params);
-    console.log(queryString)
     getResults(queryString);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state]);
-  console.log(state);
+
   return (
     <>
       <Paper className={classes.root}>

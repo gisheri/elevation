@@ -4,7 +4,7 @@ import Results from './components/Results';
 import { ThemeProvider } from './store/index';
 import { theme } from './theme';
 import axios from 'axios';
-import Header from './components/Header';
+import { Header } from './components/Header.tsx';
 
 function App() {
   const [results, setResults] = useState();
@@ -35,7 +35,12 @@ function App() {
       <div style={{ display: 'flex' }}>
         <Filter getResults={getResults} />
         {results && (
-          <Results results={results} getDetail={getDetail} detail={detail} setDetail={setDetail} />
+          <Results
+            results={results}
+            getDetail={getDetail}
+            detail={detail}
+            setDetail={setDetail}
+          />
         )}
       </div>
     </ThemeProvider>
