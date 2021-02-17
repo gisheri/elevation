@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Typography } from '../store/index';
 import { useStyles } from './NoResultsStyles';
+import YoutubeSearchedForIcon from '@material-ui/icons/YoutubeSearchedFor';
 
 export const NoResults: React.FC = () => {
   const classes = useStyles();
@@ -13,8 +14,9 @@ export const NoResults: React.FC = () => {
         Your search may be too specific.
       </Typography>
       <Typography className={classes.text} variant='body2' color='secondary'>
-        Reset the search terms.
+        Please reset your search terms.
       </Typography>
+      <YoutubeSearchedForIcon color='secondary' fontSize='large' />
     </div>
   );
 };

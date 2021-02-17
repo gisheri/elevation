@@ -10,9 +10,10 @@ import {
   getQueryString,
   getParams,
   smartDate,
+  Switch
 } from '../store/index';
 import { BootstrapInput, useStyles } from './FilterStyles';
-import Switch from '@material-ui/core/Switch';
+
 
 const initialValues = {
   campus: '',
@@ -80,12 +81,6 @@ export default function Filter({ getResults }) {
             <FaChild className={classes.icon} />
             <Typography variant='h5'>Child care provided</Typography>
           </div>
-          {/* <AntSwitch
-            checked={state.childCare}
-            onChange={(e) => handleChange(e)}
-            name='child_care'
-            color='secondary'
-          /> */}
           <Switch
             checked={state.childCare}
             onChange={(e) => handleChange(e)}

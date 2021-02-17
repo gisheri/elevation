@@ -6,6 +6,7 @@ import ChildFriendlyIcon from '@material-ui/icons/ChildFriendly';
 import PlaceIcon from '@material-ui/icons/Place';
 import ScheduleIcon from '@material-ui/icons/Schedule';
 import PersonIcon from '@material-ui/icons/Person';
+import YoutubeSearchedForIcon from '@material-ui/icons/YoutubeSearchedFor';
 
 export {
   KeyboardArrowDownIcon,
@@ -16,4 +17,5 @@ export {
   PlaceIcon,
   ScheduleIcon,
   PersonIcon,
+  YoutubeSearchedForIcon,
 };

@@ -2,7 +2,7 @@ import { makeStyles } from '../store/index';
 
 const useStyles = makeStyles((theme) => ({
   top: {
-    marginBottom: 15,
+    marginBottom: 25,
     paddingLeft: '1rem',
     borderBottom: '3px solid #E1E1E1',
     display: 'flex',
@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
   },
   row: {
     display: 'flex',
-    marginBottom: 10,
+    marginBottom: 15,
   },
   back: {
     display: 'flex',
@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
     '&:hover': {
       cursor: 'pointer',
       background: '#F4F5F7',
+      borderRadius: 4,
     },
   },
 }));
