@@ -1,21 +1,19 @@
 import React from 'react';
 import { Typography } from '../store/index';
+import { useStyles } from './NoResultsStyles';
 
 export default function NoResults() {
+  const classes = useStyles();
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-      }}
-    >
-      <Typography variant='body1'>No eGroups found.</Typography>
-      <Typography variant='body2'>Please refine your search.</Typography>
-      <Typography>Trouble Finding an eGroup?</Typography>
-      <Typography variant='body2' color='secondary'>
-        We can help!
+    <div className={classes.container}>
+      <Typography className={classes.text} variant='body1'>
+        No eGroups found.
+      </Typography>
+      <Typography className={classes.text} variant='body2'>
+        Your search may be too specific.
+      </Typography>
+      <Typography className={classes.text} variant='body2' color='secondary'>
+        Reset the search terms.
       </Typography>
     </div>
   );

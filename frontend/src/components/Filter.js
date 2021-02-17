@@ -7,9 +7,11 @@ import {
   filters,
   FaChild,
   KeyboardArrowDownIcon,
+  getQueryString,
+  getParams,
+  smartDate,
 } from '../store/index';
 import { BootstrapInput, useStyles, AntSwitch } from './FilterStyles';
-import { getQueryString, getParams } from '../store/helpers';
 
 const initialValues = {
   campus: '',
@@ -26,7 +28,8 @@ export default function Filter({ getResults }) {
 
   function handleChange(e) {
     const { name, value } = e.target;
-    if (name === 'child_care') setState({ ...state, [name]: !state.child_care });
+    if (name === 'child_care')
+      setState({ ...state, [name]: !state.child_care });
     if (value === 'View All') setState({ ...state, [name]: '' });
     if (value !== 'View All' && name !== 'child_care')
       setState({ ...state, [name]: value });
@@ -35,11 +38,10 @@ export default function Filter({ getResults }) {
   useEffect(() => {
     let params = getParams(state);
     let queryString = getQueryString(url, params);
-    console.log(queryString)
     getResults(queryString);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state]);
-  
+
   return (
     <>
       <Paper className={classes.root}>
@@ -58,7 +60,7 @@ export default function Filter({ getResults }) {
             >
               {filter.options.map((option, i) => (
                 <MenuItem value={option} key={i}>
-                  {option}
+                  {smartDate(option)}
                 </MenuItem>
               ))}
             </Select>

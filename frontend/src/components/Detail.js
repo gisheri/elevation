@@ -1,11 +1,17 @@
 import React from 'react';
 import { generateGradient } from '../store/helpers';
 import { useStyles } from './DetailStyles';
-import { ChevronLeftIcon, Typography, Avatar, getTime } from '../store/index';
-import ChildFriendlyIcon from '@material-ui/icons/ChildFriendly';
-import PlaceIcon from '@material-ui/icons/Place';
-import ScheduleIcon from '@material-ui/icons/Schedule';
-import PersonIcon from '@material-ui/icons/Person';
+import {
+  ChevronLeftIcon,
+  Typography,
+  Avatar,
+  getTime,
+  ChildFriendlyIcon,
+  PlaceIcon,
+  ScheduleIcon,
+  PersonIcon,
+} from '../store/index';
+
 export default function Detail({ detail, setDetail }) {
   const classes = useStyles();
 
