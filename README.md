@@ -1,12 +1,12 @@
 # What is this?
 
-This project is a coding challenge for the web developer position at Elevation Church. The requirements are listed in `requirements.md`.
+This project is a coding challenge for the web developer position at Elevation Church. The requirements for the challenge are listed in `requirements.md`.
 
-In order to run this application, please follow the steps below for **Database**, **Server**, and **Frontend**. Once you have completed the steps, ensure `database`, `server`, and `frontend` are all running by entering the commands `node .`, `npm run dev`, and `npm start`, respectively.
+To run this application, please follow the steps below in **How to get it running**. Once you have completed the steps, ensure `database`, `server`, and `frontend` are all running by entering the commands `node .`, `npm run dev`, and `npm start`, respectively.
 
 I chose to build the **Database** and **Server** individually to create a scalable microservice architecture.
 
-**Technologies: Loopback.io, Node.js, Typescript, React.js, MaterialUI, Mocha, Chai, Jest, Moment.js**
+**Technologies used: Loopback.io, Node.js, Typescript, React.js, MaterialUI, Mocha, Chai, Jest, Supertest, Istanbul, Axios, Nodemon, Moment.js**
 
 # How to get it running
 
@@ -14,11 +14,11 @@ I chose to build the **Database** and **Server** individually to create a scalab
 
 ### Before running the code, please enter `cd database` from the project directory and follow the 2 steps below.
 
-_\* This database is built with [loopback.io](https://loopback.io/getting-started.html). If you do not have loopback installed on your machine, you may need to run the command `$ npm install -g @loopback/cli` before running the steps below. For more information, click the link above._
 
 1. `npm install`
 2. `node .`
 
+_\* This database is built with [loopback.io](https://loopback.io/). If you do not have loopback installed on your machine, you may need to run the command `$ npm install -g @loopback/cli` before running the steps below. For more information, click [here](https://loopback.io/getting-started.html)._
 ## Server
 
 ### Before running the code, please enter `cd server` from the project directory and follow the 4 steps below.
