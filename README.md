@@ -4,7 +4,7 @@ This project is a coding challenge for the web developer position at Elevation C
 
 In order to run this application, you will need to follow the steps below for `Database`, `Server`, and `Frontend`. Once you have completed the steps, make sure `Database`, `Server`, and `Frontend` are running by entering the commands `node .`, `npm run dev`, and `npm start`, respectively.
 
-I chose to build the `Database` and `Server` individually for separation of concerns and to create a realistic scenario
+I chose to build the `Database` and `Server` individually to create a scalable microservice architecture.
 
 # How to get it running
 
