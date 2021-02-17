@@ -65,7 +65,7 @@ In the `frontend` directory, you can run:
 `npm start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [http://localhost:3006](http://localhost:3006) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
@@ -92,4 +92,90 @@ Time:        4.808 s
 Ran all test suites.
 
 Watch Usage: Press w to show more.
+```
+
+# Folder structure
+```
+├── README.md
+├── database
+│   ├── common
+│   │   └── models
+│   │       ├── groups.js
+│   │       ├── groups.json
+│   │       ├── message.js
+│   │       └── message.json
+│   ├── package-lock.json
+│   ├── package.json
+│   └── server
+│       ├── boot
+│       │   ├── authentication.js
+│       │   ├── create-data-tables.js
+│       │   └── root.js
+│       ├── component-config.json
+│       ├── config.json
+│       ├── datasources.json
+│       ├── middleware.development.json
+│       ├── middleware.json
+│       ├── model-config.json
+│       └── server.js
+├── frontend
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── public
+│   │   ├── index.html
+│   │   ├── manifest.json
+│   │   └── robots.txt
+│   └── src
+│       ├── App.css
+│       ├── App.js
+│       ├── App.test.js
+│       ├── components
+│       │   ├── Detail.js
+│       │   ├── DetailStyles.js
+│       │   ├── Filter.js
+│       │   ├── Filter.test.js
+│       │   ├── FilterStyles.js
+│       │   ├── Header.js
+│       │   ├── Header.test.js
+│       │   ├── NoResults.js
+│       │   ├── NoResults.test.js
+│       │   ├── NoResultsStyles.js
+│       │   ├── Result.js
+│       │   ├── Result.test.js
+│       │   ├── ResultStyles.js
+│       │   ├── Results.js
+│       │   ├── Results.test.js
+│       │   └── ResultsStyles.js
+│       ├── data.js
+│       ├── index.css
+│       ├── index.js
+│       ├── reportWebVitals.js
+│       ├── setupTests.js
+│       ├── store
+│       │   ├── constants.js
+│       │   ├── helpers.js
+│       │   ├── icons.js
+│       │   ├── index.js
+│       │   └── material-components.js
+│       └── theme.js
+├── requirements.md
+└── server
+    ├── package-lock.json
+    ├── package.json
+    ├── src
+    │   ├── Procfile
+    │   ├── app.js
+    │   ├── config.js
+    │   ├── route-service.js
+    │   ├── routes
+    │   │   ├── groups-router.js
+    │   │   ├── helpers.js
+    │   │   └── index.js
+    │   └── server.js
+    └── test
+        ├── app.spec.js
+        ├── groups.spec.js
+        ├── helpers.spec.js
+        ├── setup.js
+        └── testdata.js
 ```
