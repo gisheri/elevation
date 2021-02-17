@@ -52,9 +52,6 @@ const theme = createMuiTheme({
     MuiAvatar: {
       root: {
         marginRight: '15px',
-        '&:hover': {
-          backgroundColor: 'green',
-        },
       },
     },
     MuiMenuItem: {
