@@ -12,10 +12,10 @@ I chose to build the `Database` and `Server` individually to create a scalable m
 
 ## Database\*
 
-### Before running the code, please enter `cd database` from the project directory and follow the 2 steps below. The database is built with [loopback.io](https://loopback.io/getting-started.html).
+### Before running the code, please enter `cd database` from the project directory and follow the 2 steps below. 
 
 
-*\*If you do not have loopback installed on your machine, you may need to run the command `$ npm install -g @loopback/cli` before running the steps below. For more information, click the link in the paragraph above.*
+*\* This database is built with [loopback.io](https://loopback.io/getting-started.html). If you do not have loopback installed on your machine, you may need to run the command `$ npm install -g @loopback/cli` before running the steps below. For more information, click the link above.*
 
 1. `npm install`
 2. `node .`
