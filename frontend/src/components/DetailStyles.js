@@ -1,35 +1,32 @@
 import { makeStyles } from '../store/index';
 
 const useStyles = makeStyles((theme) => ({
-  card: {
+  top: {
+    marginBottom: 15,
+    paddingLeft: '1rem',
+    borderBottom: '3px solid #E1E1E1',
+    display: 'flex',
     alignItems: 'center',
-    borderBottom: '1px solid #F1F1F0',
+  },
+  bottom: {
+    padding: '0 0 0 20px',
   },
   svg: {
-    padding: 10,
+    paddingRight: 10,
+  },
+  row: {
+    display: 'flex',
+    marginBottom: 10,
+  },
+  back: {
+    display: 'flex',
+    alignItems: 'center',
+    height: 50,
+    width: '50%',
     '&:hover': {
       cursor: 'pointer',
       background: '#F4F5F7',
     },
-  },
-  info: {
-    padding: 5,
-    display: 'flex',
-    justifyContent: 'space-between',
-    marginBottom: 10,
-  },
-  left: {
-    display: 'flex',
-  },
-  right: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-end',
-  },
-  details: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
   },
 }));
 

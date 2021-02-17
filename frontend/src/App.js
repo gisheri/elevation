@@ -1,14 +1,14 @@
 import { useState } from 'react';
 import Filter from './components/Filter';
-import Results from './components/Results';
+import { Results } from './components/Results.tsx';
 import { ThemeProvider } from './store/index';
 import { theme } from './theme';
 import axios from 'axios';
-import Header from './components/Header';
+import { Header } from './components/Header.tsx';
 
 function App() {
   const [results, setResults] = useState();
-  const [detail, setDetail] = useState();
+  const [detail, setDetail] = useState('');
 
   async function getResults(query) {
     try {
@@ -35,7 +35,12 @@ function App() {
       <div style={{ display: 'flex' }}>
         <Filter getResults={getResults} />
         {results && (
-          <Results results={results} getDetail={getDetail} detail={detail} />
+          <Results
+            results={results}
+            getDetail={getDetail}
+            detail={detail}
+            setDetail={setDetail}
+          />
         )}
       </div>
     </ThemeProvider>

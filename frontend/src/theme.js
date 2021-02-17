@@ -33,6 +33,9 @@ const theme = createMuiTheme({
       fontSize: 14,
       fontWeight: 400,
     },
+    body1: {
+      fontWeight: 600,
+    },
     subtitle2: {
       fontWeight: 600,
       fontSize: 12,
@@ -49,9 +52,11 @@ const theme = createMuiTheme({
     MuiAvatar: {
       root: {
         marginRight: '15px',
-        '&:hover': {
-          backgroundColor: 'green',
-        },
+      },
+    },
+    MuiMenuItem: {
+      root: {
+        fontWeight: 400,
       },
     },
   },

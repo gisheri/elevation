@@ -1,3 +1,12 @@
+import moment from 'moment';
+
+function getTime(date) {
+  let seconds = Date.parse(date);
+  let day = moment(seconds).format('dddd');
+  let time = moment(seconds).format('LT');
+  return { day, time };
+}
+
 function getQueryString(url, params) {
   return url + params.map((key) => key[0] + '=' + key[1]).join('&');
 }
@@ -43,8 +52,12 @@ function generateGradient() {
 
   return gradient;
 }
+  function smartDate(option) {
+    if (Boolean(Date.parse(option))) {
+      return `${getTime(option).day}s at ${getTime(option).time}`;
+    } else return option;
+  }
 
 
 
-
-export { getQueryString, getParams, generateGradient };
+export { getQueryString, getParams, generateGradient, getTime, smartDate };
