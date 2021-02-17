@@ -23,7 +23,7 @@ function filterMeetingDate(data, date) {
 }
 
 function filterZipCode(data, zip) {
-  return data.filter((group) => group.zip_code == zip);
+  return data.filter((group) => group.zip_code.toString().includes(zip));
 }
 
 function filterChildCare(data) {

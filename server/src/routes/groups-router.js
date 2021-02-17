@@ -29,7 +29,7 @@ groupsRouter.get('/', async (req, res) => {
     if (demographic) result = filterDemographic(result, demographic);
     if (group_type) result = filterGroupType(result, group_type);
     if (meeting_date) result = filterMeetingDate(result, meeting_date);
-    if (zip_code) result = filterZipCode(result, zip_code);
+    if (zip_code) result = filterZipCode(result, +zip_code);
     if (child_care) result = filterChildCare(result, child_care);
     res.status(200).send(result);
   } catch (error) {

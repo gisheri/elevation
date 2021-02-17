@@ -38,10 +38,11 @@ export default function Filter({ getResults }) {
   useEffect(() => {
     let params = getParams(state);
     let queryString = getQueryString(url, params);
+    console.log(queryString)
     getResults(queryString);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state]);
-
+  console.log(state);
   return (
     <>
       <Paper className={classes.root}>
@@ -68,9 +69,10 @@ export default function Filter({ getResults }) {
         ))}
         <Typography variant='subtitle2'>Zip Code</Typography>
         <BootstrapInput
-          defaultValue='28105'
           id='bootstrap-input'
+          name='zip_code'
           className={classes.input}
+          onChange={(e) => handleChange(e)}
         />
         <div className={classes.flex}>
           <div style={{ display: 'flex', alignItems: 'center' }}>
