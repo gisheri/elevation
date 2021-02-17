@@ -43,13 +43,15 @@ It works best to run these commands from multiple tabs within terminal. Once **D
 
 ## Database
 
+In the `database` directory, you can run:
+
 `node .`
 
-Seeds the database with the given data and starts the database
+Seeds the database with the given data and starts the database.
 
 ## Server
 
-In the server directory, you can run:
+In the `server` directory, you can run:
 
 `npm run dev`
 
@@ -61,7 +63,7 @@ Runs all automated tests written for the backend. 11 passing tests result in 98%
 
 `npm run coverage`
 
-Displays current test coverage (table below)
+Displays current test coverage (table below).
 
 ```
 -------------------|---------|----------|---------|---------|-------------------
@@ -112,7 +114,6 @@ Time:        5.773 s
 Ran all test suites.
 
 Watch Usage: Press w to show more.
-
 ```
 
 # Folder structure
