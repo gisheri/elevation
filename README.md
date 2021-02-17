@@ -57,7 +57,7 @@ Runs the server on `http://localhost:8000/`, allowing for autoupdates if the dev
 
 `npm run test`
 
-Runs all automated tests written for the backend. 13 passing tests result in 100% test coverage.
+Runs all automated tests written for the backend. 11 passing tests result in 98% test coverage.
 
 `npm run coverage`
 
@@ -67,12 +67,12 @@ Displays current test coverage (table below)
 -------------------|---------|----------|---------|---------|-------------------
 File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
 -------------------|---------|----------|---------|---------|-------------------
-All files          |   91.94 |    64.29 |     100 |   98.15 |
- src               |     100 |       50 |     100 |     100 |
+All files          |    91.8 |    71.43 |     100 |   98.11 |
+ src               |     100 |      100 |     100 |     100 |
   app.js           |     100 |      100 |     100 |     100 |
-  config.js        |     100 |       50 |     100 |     100 | 2
- src/routes        |    90.2 |    66.67 |     100 |   97.67 |
-  groups-router.js |   85.29 |    66.67 |     100 |   96.43 | 36
+  config.js        |     100 |      100 |     100 |     100 |
+ src/routes        |      90 |    66.67 |     100 |   97.62 |
+  groups-router.js |   84.85 |    66.67 |     100 |    96.3 | 35
   helpers.js       |     100 |      100 |     100 |     100 |
   index.js         |     100 |      100 |     100 |     100 |
 -------------------|---------|----------|---------|---------|-------------------
