@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { generateGradient } from '../store/helpers';
 import { useStyles } from './DetailStyles';
 import {
@@ -12,7 +12,26 @@ import {
   PersonIcon,
 } from '../store/index';
 
-export default function Detail({ detail, setDetail }) {
+interface DetailProps {
+  detail: {
+    group_type: string;
+    campus: string;
+    meeting_date: string;
+    zip_code: number;
+    demographic: string;
+    additionalProp1: [
+      {
+        childcare: boolean;
+      }
+    ];
+  };
+  setDetail: () => [];
+}
+
+export const Detail: React.FunctionComponent<DetailProps> = ({
+  detail,
+  setDetail,
+}) => {
   const classes = useStyles();
 
   return (
@@ -48,11 +67,11 @@ export default function Detail({ detail, setDetail }) {
           </Typography>
         </div>
         <br />
-        <div className={classes.back} onClick={(e) => setDetail('')}>
+        <div className={classes.back} onClick={(e) => setDetail()}>
           <ChevronLeftIcon className={classes.svg} />
           <Typography variant='caption'>Back</Typography>
         </div>
       </div>
     </>
   );
-}
+};

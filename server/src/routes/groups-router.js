@@ -12,7 +12,6 @@ const {
 const groupsRouter = express.Router();
 
 groupsRouter.get('/', async (req, res) => {
-  console.log(req.query)
   const {
     campus,
     demographic,

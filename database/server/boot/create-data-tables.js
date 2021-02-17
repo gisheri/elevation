@@ -66,30 +66,4 @@ module.exports = function(app) {
       console.log('Models created: \n', Groups);
     });
   });
-
-  //   app.dataSources.mysqlDs.automigrate("Film", function (err) {
-  //     if (err) throw err;
-
-  //     app.models.Film.create(
-  //       [
-  //         {
-  //           title: "A New Hope",
-  //           opening_crawl: "It is a period of civil war",
-  //           director: "George Lucas",
-  //           producer: "Gary Kurtz",
-  //         },
-  //         {
-  //           title: "The Empire Strikes Back",
-  //           opening_crawl: "It is a dark time for the rebellion",
-  //           director: "Irvin Kershner",
-  //           producer: "Rick McCallum",
-  //         },
-  //       ],
-  //       function (err, Groups) {
-  //         if (err) throw err;
-
-  //         console.log("Models created: \n", People);
-  //       }
-  //     );
-  //   });
 };

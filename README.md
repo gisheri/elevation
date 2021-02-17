@@ -1,17 +1,24 @@
-# Database
+# What is this?
 
-### Before running the code, please enter `cd frontend` from the project directory and follow the 2 steps below.
+This project is a coding challenge for the web developer position at Elevation Church. The requirements are listed in `requirements.md`.
+
+In order to run this application, you will need to follow the steps below for `Database`, `Server`, and `Frontend`. Once you have completed the steps, make sure `Database`, `Server`, and `Frontend` are running by entering the commands `node .`, `npm run dev`, and `npm start`, respectively.
+
+I chose to build the `Database` and `Server` individually for separation of concerns and to create a realistic scenario
+
+# How to get it running
+
+## Database\*
+
+### Before running the code, please enter `cd database` from the project directory and follow the 2 steps below. The database is built with [loopback.io](https://loopback.io/getting-started.html).
+
+
+*\*If you do not have loopback installed on your machine, you may need to run the command `$ npm install -g @loopback/cli` before running the steps below. For more information, click the link in the paragraph above.*
 
 1. `npm install`
 2. `node .`
 
-## Available scripts
-
-`node .`
-
-Seeds the database with the given data and starts the database
-
-# Server
+## Server
 
 ### Before running the code, please enter `cd server` from the project directory and follow the 4 steps below.
 
@@ -21,6 +28,24 @@ From the `server` directory, please run the following commands:
 2. `npm run env`
 3. `npm run db`
 4. `npm run dev`
+
+## Frontend
+
+### Before running the code, please enter `cd frontend` from the project directory and follow the 2 steps below.
+
+1. `npm install`
+2. `npm start`
+
+It works best to run these commands from multiple tabs within terminal. Once `Database`, `Server`, and `Frontend` are all running, your browser can access the project at [http://localhost:3006](http://localhost:3006).
+# Available scripts
+
+## Database
+
+`node .`
+
+Seeds the database with the given data and starts the database
+
+## Server
 
 In the server directory, you can run:
 
@@ -50,15 +75,7 @@ All files          |   91.94 |    64.29 |     100 |   98.15 |
   index.js         |     100 |      100 |     100 |     100 |
 -------------------|---------|----------|---------|---------|-------------------
 ```
-
-# Frontend
-
-### Before running the code, please enter `cd frontend` from the project directory and follow the 2 steps below.
-
-1. `npm install`
-2. `npm start`
-
-## Available scripts
+## Frontend
 
 In the `frontend` directory, you can run:
 
@@ -95,6 +112,7 @@ Watch Usage: Press w to show more.
 ```
 
 # Folder structure
+
 ```
 ├── README.md
 ├── database
