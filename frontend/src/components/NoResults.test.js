@@ -3,6 +3,6 @@ import NoResults from './NoResults';
 
 test('renders learn react link', () => {
   render(<NoResults />);
-  const linkElement = screen.getByText(/please refine your search/i);
+  const linkElement = screen.getByText(/Your search may be too specific./i);
   expect(linkElement).toBeInTheDocument();
 });
