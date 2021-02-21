@@ -12,7 +12,7 @@ function getQueryString(url, params) {
 }
 
 function getParams(state) {
-    return Object.entries(state).filter((param) => Boolean(param[1]) !== false);
+  return Object.entries(state).filter((param) => Boolean(param[1]) !== false);
 }
 
 function generateGradient() {
@@ -52,12 +52,11 @@ function generateGradient() {
 
   return gradient;
 }
-  function smartDate(option) {
-    if (Boolean(Date.parse(option))) {
-      return `${getTime(option).day}s at ${getTime(option).time}`;
-    } else return option;
-  }
 
-
+function smartDate(option) {
+  if (Boolean(Date.parse(option))) {
+    return `${getTime(option).day}s at ${getTime(option).time}`;
+  } else return option;
+}
 
 export { getQueryString, getParams, generateGradient, getTime, smartDate };
