@@ -10,10 +10,9 @@ import {
   getQueryString,
   getParams,
   smartDate,
-  Switch
+  Switch,
 } from '../store/index';
 import { BootstrapInput, useStyles } from './FilterStyles';
-
 
 const initialValues = {
   campus: '',
@@ -24,12 +23,29 @@ const initialValues = {
   child_care: false,
 };
 
-export default function Filter({ getResults }) {
+interface IFilter {
+  getResults: (arg0: string) => [];
+  queryString: string;
+  handleChange: (arg0: string) => [];
+  setState: () => [];
+  state: {
+    campus: string;
+    demographic: string;
+    groupType: string;
+    meetingDate: string;
+    zipCode: string;
+    child_care: Boolean;
+  };
+}
+
+export const Filter: React.FC<IFilter> = ({ getResults }) => {
   const [state, setState] = useState(initialValues);
   const classes = useStyles();
   let url = 'http://localhost:8000/groups/?';
 
-  function handleChange(e) {
+  function handleChange(
+    e: React.ChangeEvent<{ name?: string | undefined; value: string }>
+  ) {
     const { name, value } = e.target;
     if (name === 'child_care')
       setState({ ...state, [name]: !state.child_care });
@@ -56,7 +72,7 @@ export default function Filter({ getResults }) {
               id='demo-simple-select'
               onChange={(e) => handleChange(e)}
               defaultValue=''
-              value={state.value}
+              value=''
               input={<BootstrapInput />}
               name={filter.value}
               IconComponent={KeyboardArrowDownIcon}
@@ -82,7 +98,7 @@ export default function Filter({ getResults }) {
             <Typography variant='h5'>Child care provided</Typography>
           </div>
           <Switch
-            checked={state.childCare}
+            checked={state.child_care}
             onChange={(e) => handleChange(e)}
             name='child_care'
             color='primary'
@@ -92,4 +108,4 @@ export default function Filter({ getResults }) {
       </Paper>
     </>
   );
-}
+};
