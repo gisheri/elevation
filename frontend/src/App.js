@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Filter } from './components/Filter.tsx';
+import Filter from './components/Filter';
 import { Results } from './components/Results.tsx';
 import { ThemeProvider } from './store/index';
 import { theme } from './theme';

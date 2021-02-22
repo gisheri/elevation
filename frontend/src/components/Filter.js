@@ -22,30 +22,12 @@ const initialValues = {
   zipCode: '',
   child_care: false,
 };
-
-interface IFilter {
-  getResults: (arg0: string) => [];
-  queryString: string;
-  handleChange: (arg0: string) => [];
-  setState: () => [];
-  state: {
-    campus: string;
-    demographic: string;
-    groupType: string;
-    meetingDate: string;
-    zipCode: string;
-    child_care: Boolean;
-  };
-}
-
-export const Filter: React.FC<IFilter> = ({ getResults }) => {
+export default function Filter({ getResults }) {
   const [state, setState] = useState(initialValues);
   const classes = useStyles();
   let url = 'http://localhost:8000/groups/?';
 
-  function handleChange(
-    e: React.ChangeEvent<{ name?: string | undefined; value: string }>
-  ) {
+  function handleChange(e) {
     const { name, value } = e.target;
     if (name === 'child_care')
       setState({ ...state, [name]: !state.child_care });
@@ -72,7 +54,7 @@ export const Filter: React.FC<IFilter> = ({ getResults }) => {
               id='demo-simple-select'
               onChange={(e) => handleChange(e)}
               defaultValue=''
-              value=''
+              value={state.value}
               input={<BootstrapInput />}
               name={filter.value}
               IconComponent={KeyboardArrowDownIcon}
@@ -108,4 +90,4 @@ export const Filter: React.FC<IFilter> = ({ getResults }) => {
       </Paper>
     </>
   );
-};
+}
