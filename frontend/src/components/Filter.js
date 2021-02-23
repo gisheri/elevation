@@ -22,6 +22,7 @@ const initialValues = {
   zipCode: '',
   child_care: false,
 };
+
 export default function Filter({ getResults }) {
   const [state, setState] = useState(initialValues);
   const classes = useStyles();
@@ -44,50 +45,48 @@ export default function Filter({ getResults }) {
   }, [state]);
 
   return (
-    <>
-      <Paper className={classes.root}>
-        {filters.map((filter, i) => (
-          <div key={i} className={classes.input}>
-            <Typography variant='subtitle2'>{filter.title}</Typography>
-            <Select
-              labelId=''
-              id='demo-simple-select'
-              onChange={(e) => handleChange(e)}
-              defaultValue=''
-              value={state.value}
-              input={<BootstrapInput />}
-              name={filter.value}
-              IconComponent={KeyboardArrowDownIcon}
-            >
-              {filter.options.map((option, i) => (
-                <MenuItem value={option} key={i}>
-                  {smartDate(option)}
-                </MenuItem>
-              ))}
-            </Select>
-          </div>
-        ))}
-        <Typography variant='subtitle2'>Zip Code</Typography>
-        <BootstrapInput
-          id='bootstrap-input'
-          name='zip_code'
-          className={classes.input}
-          onChange={(e) => handleChange(e)}
-        />
-        <div className={classes.flex}>
-          <div style={{ display: 'flex', alignItems: 'center' }}>
-            <FaChild className={classes.icon} />
-            <Typography variant='h5'>Child care provided</Typography>
-          </div>
-          <Switch
-            checked={state.child_care}
+    <Paper className={classes.root}>
+      {filters.map((filter, i) => (
+        <div key={i} className={classes.input}>
+          <Typography variant='subtitle2'>{filter.title}</Typography>
+          <Select
+            labelId=''
+            id='demo-simple-select'
             onChange={(e) => handleChange(e)}
-            name='child_care'
-            color='primary'
-            inputProps={{ 'aria-label': 'primary checkbox' }}
-          />
+            defaultValue=''
+            value={state.value}
+            input={<BootstrapInput />}
+            name={filter.value}
+            IconComponent={KeyboardArrowDownIcon}
+          >
+            {filter.options.map((option, i) => (
+              <MenuItem value={option} key={i}>
+                {smartDate(option)}
+              </MenuItem>
+            ))}
+          </Select>
         </div>
-      </Paper>
-    </>
+      ))}
+      <Typography variant='subtitle2'>Zip Code</Typography>
+      <BootstrapInput
+        id='bootstrap-input'
+        name='zip_code'
+        className={classes.input}
+        onChange={(e) => handleChange(e)}
+      />
+      <div className={classes.flex}>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <FaChild className={classes.icon} />
+          <Typography variant='h5'>Child care provided</Typography>
+        </div>
+        <Switch
+          checked={state.child_care}
+          onChange={(e) => handleChange(e)}
+          name='child_care'
+          color='primary'
+          inputProps={{ 'aria-label': 'primary checkbox' }}
+        />
+      </div>
+    </Paper>
   );
 }
