@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { generateGradient } from '../utils/queryStringHelpers';
 import { useStyles } from './DetailStyles';
 import {
   ChevronLeftIcon,
@@ -10,6 +9,7 @@ import {
   PlaceIcon,
   ScheduleIcon,
   PersonIcon,
+  generateGradient,
 } from '../utils/index';
 
 export interface IDetail {
