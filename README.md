@@ -1,6 +1,6 @@
 # What is this?
 
-This project is a coding challenge for the web developer position at Elevation Church. The requirements for the challenge are listed in `requirements.md`.
+This project is a coding challenge for the web developer position at Elevation. The requirements for the challenge are listed in `requirements.md`.
 
 To run this application, please follow the steps below in **How to get it running**. Once you have completed the steps, ensure `database`, `server`, and `frontend` are all running by entering the commands `node .`, `npm run dev`, and `npm start`, respectively. It works best to run these commands from multiple tabs within terminal. 
 
