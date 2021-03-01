@@ -8,12 +8,30 @@ function getTime(date) {
 }
 
 function getQueryString(url, params) {
-  return url + params.map((key) => key[0] + '=' + key[1]).join('&');
+  console.log(
+    url +
+      params
+        .map((key) => {
+          const thing1 = key[0];
+          const thing2 = key[1].replace('_', '%20');
+          return thing1 + '=' + thing2;
+        })
+        .join('&')
+  );
+  return (
+    url +
+    params
+      .map((key) => {
+        const thing1 = key[0];
+        const thing2 = key[1].replace('_', '%20');
+        return thing1 + '=' + thing2;
+      })
+      .join('&')
+  );
 }
 
 function getParams(state) {
   return Object.entries(state).filter((param) => !!param[1]);
-  // return Object.entries(state).filter((param) => Boolean(param[1]) !== false);
 }
 
 function generateGradient() {

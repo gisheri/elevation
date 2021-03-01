@@ -1,5 +1,3 @@
-const VIEW_ALL = 'View All';
-
 export type FilterKey =
   | 'campus'
   | 'demographic'
