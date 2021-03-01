@@ -5,7 +5,7 @@ import {
   Typography,
   Avatar,
   generateGradient,
-} from '../store/index';
+} from '../utils/index';
 import { IDetail } from './Detail';
 
 interface IResult {

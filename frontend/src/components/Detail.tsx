@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { generateGradient } from '../store/helpers';
+import { generateGradient } from '../utils/helpers';
 import { useStyles } from './DetailStyles';
 import {
   ChevronLeftIcon,
@@ -10,7 +10,7 @@ import {
   PlaceIcon,
   ScheduleIcon,
   PersonIcon,
-} from '../store/index';
+} from '../utils/index';
 
 export interface IDetail {
   detail: {

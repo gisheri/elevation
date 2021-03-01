@@ -1,4 +1,4 @@
-import { makeStyles } from '../store/index';
+import { makeStyles } from '../utils/index';
 
 const useStyles = makeStyles((theme) => ({
   top: {

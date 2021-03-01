@@ -1,7 +1,7 @@
-import { useState } from 'react';
-import Filter from './components/Filter';
+import { useState, useCallback } from 'react';
+import { Filter } from './components/Filter.tsx';
 import { Results } from './components/Results.tsx';
-import { ThemeProvider } from './store/index';
+import { ThemeProvider } from './utils/index';
 import { theme } from './theme';
 import axios from 'axios';
 import { Header } from './components/Header.tsx';
@@ -10,16 +10,16 @@ function App() {
   const [results, setResults] = useState();
   const [detail, setDetail] = useState('');
 
-  async function getResults(query) {
+  const getResults = useCallback(async function getResults(query) {
     try {
       const result = await axios.get(query);
       setResults(result.data);
     } catch (error) {
       console.error(error);
     }
-  }
+  }, [])
 
-  async function getDetail(id) {
+  const getDetail = useCallback(async function getDetail(id) {
     try {
       let url = 'http://localhost:8000/groups/';
       let result = await axios.get(`${url}/${id}`);
@@ -27,7 +27,7 @@ function App() {
     } catch (error) {
       console.error(error);
     }
-  }
+  }, []);
 
   return (
     <ThemeProvider theme={theme}>

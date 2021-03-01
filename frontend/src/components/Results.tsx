@@ -1,5 +1,5 @@
 import React from 'react';
-import { Paper } from '../store/index';
+import { Paper } from '../utils/index';
 import { useStyles } from './ResultsStyles';
 import { NoResults } from './NoResults';
 import { Result } from './Result';

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Typography } from '../store/index';
+import { Typography } from '../utils/index';
 import { useStyles } from './NoResultsStyles';
 import YoutubeSearchedForIcon from '@material-ui/icons/YoutubeSearchedFor';
 

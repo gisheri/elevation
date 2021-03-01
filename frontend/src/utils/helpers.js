@@ -12,7 +12,8 @@ function getQueryString(url, params) {
 }
 
 function getParams(state) {
-  return Object.entries(state).filter((param) => Boolean(param[1]) !== false);
+  return Object.entries(state).filter((param) => !!param[1]);
+  // return Object.entries(state).filter((param) => Boolean(param[1]) !== false);
 }
 
 function generateGradient() {

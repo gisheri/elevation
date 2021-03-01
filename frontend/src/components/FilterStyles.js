@@ -1,4 +1,4 @@
-import { makeStyles, withStyles, InputBase } from '../store/index';
+import { makeStyles, withStyles, InputBase } from '../utils/index';
 
 const useStyles = makeStyles({
   root: {
