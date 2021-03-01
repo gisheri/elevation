@@ -63,7 +63,6 @@ export const Filter: React.FC<FilterProps> = ({ getResults }) => {
 
 export type FilterDisplayProps = {
   formFields: FormValues;
-  // handleChange: (event: React.ChangeEvent<{ name?: string; value: unknown }>) => void;
   handleChange: (key: FilterKey, value: unknown) => void;
 };
 
@@ -86,8 +85,7 @@ export const FilterDisplay: React.FC<FilterDisplayProps> = function FilterDispla
             name={filter.value}
             IconComponent={KeyboardArrowDownIcon}
           >
-            {/* // Add the VIEW ALL item */}
-            {/* // view all is hard coded to have value of '' */}
+            <MenuItem value=''>View all</MenuItem>
             {filter.options.map((option, i) => (
               <MenuItem value={option.value} key={i}>
                 {smartDate(option.name)}
@@ -109,7 +107,7 @@ export const FilterDisplay: React.FC<FilterDisplayProps> = function FilterDispla
           <Typography variant='h5'>Child care provided</Typography>
         </div>
         <Switch
-          checked={props.formFields.child_care}
+          checked={props.formFields['child_care']}
           onChange={(e) => props.handleChange('child_care', e.target.value)}
           name='child_care'
           color='primary'
