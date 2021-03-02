@@ -1,9 +1,13 @@
 function getQueryString(url, params) {
+  let thing;
   return (
     url +
     params
       .map((key) => {
-        return key[0] + '=' + key[1].replace('_', '%20');
+        if (key[1].toString().includes('_')) {
+          thing = key[1].replace('_', '%20');
+        } else thing = key[1];
+        return key[0] + '=' + thing;
       })
       .join('&')
   );

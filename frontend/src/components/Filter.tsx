@@ -26,17 +26,28 @@ interface FilterProps {
 
 export const Filter: React.FC<FilterProps> = ({ getResults }) => {
   const [formFields, setFormFields] = useState(initialValues);
-  let url = 'http://localhost:8000/groups/?';
+  const url = 'http://localhost:8000/groups/?';
 
   function handleChange(key: FilterKey, value: unknown) {
+    console.log("it's changing");
     setFormFields({ ...formFields, [key]: value });
   }
 
+  function handleSwitch() {
+    setFormFields({ ...formFields, child_care: !formFields.child_care });
+  }
+
   useEffect(() => {
-    let params = getParams(formFields);
-    let queryString = getQueryString(url, params);
+    const params = getParams(formFields);
+    const queryString = getQueryString(url, params);
     getResults(queryString);
   }, [formFields, getResults, url]);
 
-  return <FilterDisplay formFields={formFields} handleChange={handleChange} />;
+  return (
+    <FilterDisplay
+      formFields={formFields}
+      handleChange={handleChange}
+      handleSwitch={handleSwitch}
+    />
+  );
 };

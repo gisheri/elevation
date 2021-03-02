@@ -3,12 +3,12 @@ export type FilterKey =
   | 'demographic'
   | 'group_type'
   | 'meeting_date'
-  | 'zip_code'
-  | 'child_care';
+  | 'zip_code';
+  // | 'child_care';
 
 type BaseFilter = {
   title: string;
-  value: FilterKey; // change this to 'key'
+  key: FilterKey; // change this to 'key'
 };
 
 type FilterConfiguration = BaseFilter & {
@@ -26,8 +26,7 @@ const filters: FilterConfiguration[] = [
   {
     type: 'select',
     title: 'Campus',
-    value: 'campus',
-    // supportsViewAll: true,
+    key: 'campus',
     options: [
       { name: 'Asheville', value: 'asheville' },
       { name: 'Ballantyne', value: 'ballantyne' },
@@ -41,7 +40,7 @@ const filters: FilterConfiguration[] = [
   {
     type: 'select',
     title: 'Demographic',
-    value: 'demographic',
+    key: 'demographic',
     options: [
       { name: 'Men', value: 'men' },
       { name: 'Singles', value: 'singles' },
@@ -52,7 +51,7 @@ const filters: FilterConfiguration[] = [
   {
     type: 'select',
     title: 'Group Type',
-    value: 'group_type',
+    key: 'group_type',
     options: [
       { name: 'Marriage', value: 'marriage' },
       { name: 'Spiritual Growth', value: 'spiritual_growth' },
@@ -65,7 +64,7 @@ const filters: FilterConfiguration[] = [
   {
     type: 'select',
     title: 'Meeting Date',
-    value: 'meeting_date',
+    key: 'meeting_date',
     options: [
       { name: '2020-11-02T19:16:57.985Z', value: '2020-11-02T19:16:57.985Z' },
       { name: '2020-09-02T19:16:57.985Z', value: '2020-09-02T19:16:57.985Z' },
@@ -73,6 +72,11 @@ const filters: FilterConfiguration[] = [
       { name: '2020-10-02T19:16:57.985Z', value: '2020-10-02T19:16:57.985Z' },
     ],
   },
+  // {
+  //   type: 'boolean',
+  //   title: 'Child Care',
+  //   key: 'child_care',
+  // },
 ];
 
 export { filters };
