@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react';
 import { Filter } from './FilterPanel/components/Filter.tsx';
-import { Results } from './components/Results.tsx';
+import { Results } from './ResultsPanel/Results.tsx';
 import { ThemeProvider } from './utils/index';
 import { theme } from './theme';
 import axios from 'axios';
