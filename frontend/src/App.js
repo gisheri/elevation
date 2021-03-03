@@ -1,10 +1,10 @@
 import { useState, useCallback } from 'react';
-import { Filter } from './FilterPanel/components/Filter.tsx';
+import { Filter } from './FilterPanel/Filter.tsx';
 import { Results } from './ResultsPanel/Results.tsx';
 import { ThemeProvider } from './utils/index';
 import { theme } from './theme';
 import axios from 'axios';
-import { Header } from './components/Header.tsx';
+import { Header } from './Header/Header.tsx';
 
 function App() {
   const [results, setResults] = useState();

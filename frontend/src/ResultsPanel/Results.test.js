@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import { Results } from './Results';
-import { groups } from '../data';
+import { groups } from '../utils/index';
 
-test('renders learn react link', () => {
+test('renders Results component', () => {
   render(<Results results={groups} />);
   const linkElement = screen.getByText(/asheville/i);
   expect(linkElement).toBeInTheDocument();

@@ -6,14 +6,14 @@ import {
   Avatar,
   generateGradient,
 } from '../utils/index';
-import { IDetail } from './Detail';
+import { DetailProps } from './Detail';
 
-interface IResult {
-  result: IDetail['detail'];
+interface ResultProps {
+  result: DetailProps['detail'];
   getDetail: (arg0: number) => [];
 }
 
-export const Result: React.FC<IResult> = ({ result, getDetail }) => {
+export const Result: React.FC<ResultProps> = ({ result, getDetail }) => {
   const classes = useStyles();
 
   return (

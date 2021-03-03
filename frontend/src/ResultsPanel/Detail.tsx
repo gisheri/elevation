@@ -12,7 +12,7 @@ import {
   generateGradient,
 } from '../utils/index';
 
-export interface IDetail {
+export interface DetailProps {
   detail: {
     id: number;
     group_type: string;
@@ -29,7 +29,7 @@ export interface IDetail {
   setDetail: () => [];
 }
 
-export const Detail: React.FC<IDetail> = ({ detail, setDetail }) => {
+export const Detail: React.FC<DetailProps> = ({ detail, setDetail }) => {
   const classes = useStyles();
 
   return (

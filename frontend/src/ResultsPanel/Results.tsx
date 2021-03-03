@@ -4,16 +4,16 @@ import { useStyles } from './ResultsStyles';
 import { NoResults } from './NoResults';
 import { Result } from './Result';
 import { Detail } from './Detail';
-import { IDetail } from './Detail';
+import { DetailProps } from './Detail';
 
-export interface IResults {
-  detail: IDetail['detail'];
-  setDetail: IDetail['setDetail'];
+export interface ResultsProps {
+  detail: DetailProps['detail'];
+  setDetail: DetailProps['setDetail'];
   results: [];
   getDetail: () => [];
 }
 
-export const Results: React.FC<IResults> = ({
+export const Results: React.FC<ResultsProps> = ({
   results,
   getDetail,
   detail,

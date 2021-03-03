@@ -9,7 +9,7 @@ import {
   smartDate,
   Switch,
   FilterKey,
-} from '../../utils/index';
+} from '../utils/index';
 import { FormValues } from './Filter';
 import { BootstrapInput, useStyles } from './FilterStyles';
 
