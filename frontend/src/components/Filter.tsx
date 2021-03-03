@@ -29,7 +29,6 @@ export const Filter: React.FC<FilterProps> = ({ getResults }) => {
   const url = 'http://localhost:8000/groups/?';
 
   function handleChange(key: FilterKey, value: unknown) {
-    console.log("it's changing");
     setFormFields({ ...formFields, [key]: value });
   }
 
