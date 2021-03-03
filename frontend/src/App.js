@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react';
-import { Filter } from './components/Filter.tsx';
+import { Filter } from './FilterPanel/components/Filter.tsx';
 import { Results } from './components/Results.tsx';
 import { ThemeProvider } from './utils/index';
 import { theme } from './theme';

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getQueryString, getParams, FilterKey } from '../utils/index';
+import { getQueryString, getParams, FilterKey } from '../../utils/index';
 import { FilterDisplay } from './FilterDisplay';
 
 export type FormValues = {
