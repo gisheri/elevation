@@ -6,7 +6,7 @@ To run this application, please follow the steps below in **How to get it runnin
 
 I chose to build the **Database** and **Server** individually to create a scalable microservice architecture.
 
-**Technologies used: Loopback.io, Node.js, Typescript, React.js, MaterialUI, Mocha, Chai, Jest, Supertest, Istanbul, Axios, Nodemon, Moment.js**
+**Technologies used**: Loopback.io, Node.js, Typescript, React.js, MaterialUI, Mocha, Chai, Jest, Supertest, Istanbul, Axios, Nodemon, Moment.js
 
 # How to get it running
 
