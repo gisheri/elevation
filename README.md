@@ -34,6 +34,8 @@ From the `server` directory, please run the following commands:
 
 ### Before running the code, please enter `cd frontend` from the project directory and follow the 2 steps below.
 
+1. `npm run env`
+2. `npm run db_url`
 1. `npm install`
 2. `npm start`
 

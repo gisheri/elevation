@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getQueryString, getParams, FilterKey } from '../utils/index';
 import { FilterDisplay } from './FilterDisplay';
-
+const db_url = process.env.REACT_APP_DB_URL;
 export type FormValues = {
   campus: string;
   demographic: string;
@@ -26,7 +26,7 @@ interface FilterProps {
 
 export const Filter: React.FC<FilterProps> = ({ getResults }) => {
   const [formFields, setFormFields] = useState(initialValues);
-  const url = 'http://localhost:8000/groups/?';
+  const url = `${db_url}/groups/?`;
 
   function handleChange(key: FilterKey, value: unknown) {
     setFormFields({ ...formFields, [key]: value });
@@ -43,13 +43,12 @@ export const Filter: React.FC<FilterProps> = ({ getResults }) => {
   }, [formFields, getResults, url]);
 
   return (
-    <>
-    campus
-    <FilterDisplay
-      formFields={formFields}
-      handleChange={handleChange}
-      handleSwitch={handleSwitch}
-    />
+    <>  
+      <FilterDisplay
+        formFields={formFields}
+        handleChange={handleChange}
+        handleSwitch={handleSwitch}
+      />
     </>
   );
 };

@@ -5,6 +5,7 @@ import { ThemeProvider } from './utils/index';
 import { theme } from './theme';
 import axios from 'axios';
 import { Header } from './Header/Header.tsx';
+const db_url = process.env.REACT_APP_DB_URL;
 
 function App() {
   const [results, setResults] = useState();
@@ -17,12 +18,12 @@ function App() {
     } catch (error) {
       console.error(error);
     }
-  }, [])
+  }, []);
 
   const getDetail = useCallback(async function getDetail(id) {
     try {
-      let url = 'http://localhost:8000/groups/';
-      let result = await axios.get(`${url}/${id}`);
+      const url = `${db_url}/groups/`;
+      const result = await axios.get(`${url}/${id}`);
       setDetail(result.data);
     } catch (error) {
       console.error(error);

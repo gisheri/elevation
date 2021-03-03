@@ -25,7 +25,9 @@
     "start": "PORT=3006 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "env": "touch .env",
+    "db": "echo 'REACT_APP_DB_URL=http://localhost:8000' >> .env"
   },
   "eslintConfig": {
     "extends": [
