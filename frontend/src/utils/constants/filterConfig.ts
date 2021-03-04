@@ -1,14 +1,8 @@
-export type FilterKey =
-  | 'campus'
-  | 'demographic'
-  | 'group_type'
-  | 'meeting_date'
-  | 'zip_code';
-  // | 'child_care';
+import { GroupFilters } from "../../api/groups";
 
 type BaseFilter = {
   title: string;
-  key: FilterKey; // change this to 'key'
+  key: keyof GroupFilters; // change this to 'key'
 };
 
 type FilterConfiguration = BaseFilter & {
@@ -22,7 +16,7 @@ type FilterConfiguration = BaseFilter & {
   //   }
 };
 
-const filters: FilterConfiguration[] = [
+export const filterConfigs: FilterConfiguration[] = [
   {
     type: 'select',
     title: 'Campus',
@@ -78,5 +72,3 @@ const filters: FilterConfiguration[] = [
   //   key: 'child_care',
   // },
 ];
-
-export { filters };

@@ -30,7 +30,7 @@ function handleSwitch() {
 test('renders Filter component', () => {
   render(
     <FilterDisplay
-      formFields={initialValues}
+      filters={initialValues}
       handleChange={handleChange}
       handleSwitch={handleSwitch}
     />

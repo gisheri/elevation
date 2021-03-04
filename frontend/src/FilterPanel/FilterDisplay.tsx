@@ -1,40 +1,35 @@
+import { GroupFilters } from '../api/groups';
 import {
   Paper,
   Select,
   MenuItem,
   Typography,
-  filters,
+  filterConfigs,
   FaChild,
   KeyboardArrowDownIcon,
   smartDate,
   Switch,
-  FilterKey,
 } from '../utils/index';
-import { FormValues } from './Filter';
 import { BootstrapInput, useStyles } from './FilterStyles';
 
 export type FilterDisplayProps = {
-  formFields: FormValues;
-  handleChange: (key: FilterKey, value: unknown) => void;
+  filters: GroupFilters;
+  handleChange: (filters: Partial<GroupFilters>) => void;
   handleSwitch: () => void;
 };
 
-export const FilterDisplay: React.FC<FilterDisplayProps> = function FilterDisplay(
-  props
-) {
+export const FilterDisplay: React.FC<FilterDisplayProps> = (props) => {
   const classes = useStyles();
 
   return (
     <Paper className={classes.root}>
-      {filters.map((filter, i) => (
+      {filterConfigs.map((filter, i) => (
         <div key={i} className={classes.input}>
           <Typography variant='subtitle2'>{filter.title}</Typography>
           <Select
-            labelId=''
-            id='demo-simple-select'
-            onChange={(e) => props.handleChange(filter.key, e.target.value)}
-            defaultValue=''
-            value={props.formFields[filter.key]}
+            id={`select-${filter.key}`}
+            onChange={(e) => props.handleChange({ [filter.key]: e.target.value })}
+            value={props.filters[filter.key]}
             input={<BootstrapInput />}
             name={filter.key}
             IconComponent={KeyboardArrowDownIcon}
@@ -53,7 +48,7 @@ export const FilterDisplay: React.FC<FilterDisplayProps> = function FilterDispla
         id='bootstrap-input'
         name='zip_code'
         className={classes.input}
-        onChange={(e) => props.handleChange('zip_code', e.target.value)}
+        onChange={(e) => props.handleChange({ zip_code: e.target.value })}
       />
       <div className={classes.flex}>
         <div style={{ display: 'flex', alignItems: 'center' }}>
@@ -61,7 +56,7 @@ export const FilterDisplay: React.FC<FilterDisplayProps> = function FilterDispla
           <Typography variant='h5'>Child care provided</Typography>
         </div>
         <Switch
-          checked={props.formFields.child_care}
+          checked={props.filters.child_care}
           onChange={(e) => props.handleSwitch()}
           name='child_care'
           color='primary'

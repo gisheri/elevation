@@ -1,51 +1,28 @@
-import React, { useState, useEffect } from 'react';
-import { getQueryString, getParams, FilterKey } from '../utils/index';
+import React, { useState } from 'react';
+import { getEmptyFilters, GroupFilters } from '../api/groups';
 import { FilterDisplay } from './FilterDisplay';
-const db_url = process.env.REACT_APP_DB_URL;
-export type FormValues = {
-  campus: string;
-  demographic: string;
-  group_type: string;
-  meeting_date: string;
-  zip_code: string;
-  child_care: boolean;
-};
-
-const initialValues: FormValues = {
-  campus: '',
-  demographic: '',
-  group_type: '',
-  meeting_date: '',
-  zip_code: '',
-  child_care: false,
-};
 
 interface FilterProps {
-  getResults: (arg1: string) => [];
+  onFiltersChange: (filters: GroupFilters) => void;
 }
 
-export const Filter: React.FC<FilterProps> = ({ getResults }) => {
-  const [formFields, setFormFields] = useState(initialValues);
-  const url = `${db_url}/groups/?`;
+export const Filter: React.FC<FilterProps> = ({ onFiltersChange }) => {
+  const [formFields, setFormFields] = useState(getEmptyFilters());
 
-  function handleChange(key: FilterKey, value: unknown) {
-    setFormFields({ ...formFields, [key]: value });
+  function handleChange(filters: Partial<GroupFilters>) {
+    console.log(filters);
+    setFormFields({ ...formFields, ...filters });
+    onFiltersChange({ ...formFields, ...filters });
   }
 
   function handleSwitch() {
     setFormFields({ ...formFields, child_care: !formFields.child_care });
   }
 
-  useEffect(() => {
-    const params = getParams(formFields);
-    const queryString = getQueryString(url, params);
-    getResults(queryString);
-  }, [formFields, getResults, url]);
-
   return (
     <>  
       <FilterDisplay
-        formFields={formFields}
+        filters={formFields}
         handleChange={handleChange}
         handleSwitch={handleSwitch}
       />
